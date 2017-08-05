@@ -1,5 +1,8 @@
-OctoberCMS | Bulma.io + Vue.js + Webpack | Developper Theme
+Bulma.io + VueJs + Webpack | Developper Theme
 ==========
+
+OctoberCMS free theme
+> Under development !!!! NOT READY FOR PRODUCTION, Just yet.
 
 ## Combining CSS and JavaScript
 
