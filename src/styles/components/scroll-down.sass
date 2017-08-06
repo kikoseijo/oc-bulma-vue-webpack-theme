@@ -1,0 +1,23 @@
+@mixin animate-icon($duration, $delay)
+  -webkit-animation-duration: duration
+  -webkit-animation-delay: $delay
+  -webkit-animation-iteration-count: infinite
+  -moz-animation-duration: duration
+  -moz-animation-delay: $delay
+  -moz-animation-iteration-count: infinite
+  -ms-animation-duration: duration
+  -ms-animation-delay: $delay
+  -ms-animation-iteration-count: infinite
+
+
+#ct-btn-scroll
+  .icon
+    .fa
+      color: #fff
+      font-size: 48px
+
+#ct-btn-scroll:focus,
+#ct-btn-scroll:hover
+  .icon
+    .fa
+      color: $primary-invert

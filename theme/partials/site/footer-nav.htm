@@ -1,0 +1,37 @@
+description = "Footer Navigation partial"
+==
+<div class="columns">
+  <div class="column">
+    <h4 class="title is-6">Page examples</h4>
+    <ul>
+      <li><a href="#don">Blog</a></li>
+      <li><a href="#don">Blog item</a></li>
+      <li><a href="#don">Online Shop</a></li>
+      <li><a href="#don">Portfolio</a></li>
+    </ul>
+  </div>
+  <div class="column">
+    <h4 class="title is-6">Html Elements</h4>
+    <ul>
+      {% for element in this.theme.config.elements %}
+      <li><a href="/elements/{{element}}" class="{% if show_element == element %} active{% endif %}">{{str_studly(element)}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="column">
+    <h4 class="title is-6">Menu title</h4>
+    <ul>
+      <li><a href="#don">Menu item 1</a></li>
+      <li><a href="#don">Menu item 1</a></li>
+      <li><a href="#don">Menu item 1</a></li>
+      <li><a href="#don">Menu item 1</a></li>
+      <li><a href="#don">Menu item 1</a></li>
+    </ul>
+  </div>
+  <div class="column">
+    <h4 class="title is-6">Our partners</h4>
+    <figure class="image is-128x128">
+      <img src="http://bulma.io/images/placeholders/256x256.png">
+    </figure>
+  </div>
+</div>

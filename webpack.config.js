@@ -49,7 +49,6 @@ module.exports = {
           },
           'img-loader'
         ]
-
       },
       {
         test: /\.(svg|woff|woff2|eot|ttf)(\?.*$|$)/,
@@ -60,7 +59,11 @@ module.exports = {
       }
     ]
   },
-
+  resolve: {
+    alias: {
+      //clipboard: '/node_modules/clipboard/dist/clipboard',
+    }
+  },
   plugins: [
     // new CleanWebpackPlugin(['assets/fonts','assets/images', 'assets/scripts'],{
     //   root: __dirname + '/theme',

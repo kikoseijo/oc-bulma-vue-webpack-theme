@@ -2,7 +2,7 @@ name: 'Bulma Boilerplate Theme'
 description: 'An OctoberCMS Theme for developpers, uses Bulma for CSS - Vue for Javascript - Webpack to build styles, optimize images, compile javascript and VueJs.'
 author: 'Kiko Seijo'
 homepage: 'http://sunnyface.com'
-
+elements: ['responsive', 'hero', 'grid','box','buttons','tiles','timeline', 'card', 'typography', 'menu', 'message', 'modal', 'tabs', 'notification', 'table', 'form']
 #require:
 #    - Acme.User
 #    - Acme.Blog

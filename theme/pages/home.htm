@@ -1,6 +1,7 @@
 url = '/'
 layout = default
-description = "Home page"
+title = 'Home page'
+description = "The website landing page"
 ==
 function onStart()
 {
@@ -8,11 +9,12 @@ function onStart()
 }
 ==
 <!-- Header -->
-<section class="hero is-fullheight is-dark">
-{% partial 'site/header' header_css='hero is-fullheight is-dark' %}
+<section class="hero is-fullheight is-primary is-bold">
+{% partial 'site/header' %}
 {% partial 'pages/home-head' %}
 </section>
 <!-- Body -->
 {% partial 'pages/home-body' %}
 <!-- Footer -->
+{% partial 'parts/callout_newsletter' %}
 {% partial 'site/footer' %}

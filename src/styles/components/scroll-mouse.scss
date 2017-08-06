@@ -1,0 +1,84 @@
+//for change size mouse
+$mouse-size-height:                      50px !default;
+$mouse-border-size:                      2px !default;
+$mouse-color:                            #fff !default;
+
+//for change size down arrow
+$arrow-size:                             9px !default;
+
+// automatic change other sizes
+$mouse-size-width:                       floor((($mouse-size-height/3)*2) + $mouse-border-size) !default;
+$mouse-radius:                           floor(($mouse-size-height/3 - $mouse-border-size)) !default;
+$mouse-wheel-height:                     floor($mouse-size-height/6) !default;
+$mouse-wheel-width:                      $mouse-border-size !default;
+$mouse-wheel-anim:                       $mouse-wheel-height !default;
+
+$arrow-scroll-color:                     $mouse-color !default;
+$arrow-border-size:                      $mouse-border-size !default;
+
+/* =============================================================================
+  Mouse animation scroll
+============================================================================= */
+.mouse {
+  height: $mouse-size-height;
+  width: $mouse-size-width;
+  border-radius: $mouse-radius;
+  border: $mouse-border-size solid $mouse-color;
+
+  &:after {
+    content: '';
+    display: block;
+
+    height: $mouse-wheel-height;
+    width: $mouse-wheel-width;
+    margin: ($mouse-wheel-height + $mouse-wheel-width) auto;
+    background: $mouse-color;
+    position: relative;
+
+    animation: mouse-wheel 1.2s ease infinite;
+  }
+}
+
+.arrow-scroll {
+  width: $mouse-size-width;
+  margin-top: 10px;
+
+  > span {
+    font-family: Arial, sans-serif;
+    display: block;
+    width: $arrow-size;
+    height: $arrow-size;
+    transform: rotate(45deg);
+    border-right: $arrow-border-size solid $arrow-scroll-color;
+    border-bottom: $arrow-border-size solid $arrow-scroll-color;
+    margin: ceil($arrow-size/2) auto ceil($arrow-size/3);
+
+    animation: mouse-scroll 1s infinite;
+    animation-delay: .2s;
+
+    &:first-child {
+      animation-delay: .1s;
+    }
+    &:last-child {
+      animation-delay: .3s;
+    }
+  }
+}
+
+/* Keyframes */
+@keyframes mouse-wheel {
+   0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY($mouse-wheel-anim);
+  }
+}
+@keyframes mouse-scroll {
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}

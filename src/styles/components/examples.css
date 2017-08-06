@@ -1,0 +1,203 @@
+.example,
+.structure {
+  border: 1px solid #ffdd57;
+  border-top-right-radius: 3px;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.example:not(:first-child),
+.structure:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.example:not(:last-child),
+.structure:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.example:before,
+.structure:before {
+  background: #ffdd57;
+  border-radius: 3px 3px 0 0;
+  bottom: 100%;
+  content: "Example";
+  display: inline-block;
+  font-size: 7px;
+  font-weight: bold;
+  left: -1px;
+  letter-spacing: 1px;
+  padding: 3px 5px;
+  position: absolute;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+
+@media screen and (min-width: 769px), print {
+  .example.is-fullwidth,
+  .structure.is-fullwidth {
+    border-left: none;
+    border-right: none;
+    padding: 0;
+  }
+}
+
+.example + .highlight {
+  border: 1px solid #ffdd57;
+  border-radius: 0 0 3px 3px;
+  border-top: none;
+  margin-top: -1.5rem;
+}
+
+.example + .highlight:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.highlight pre {
+  max-height: 480px;
+  margin-bottom: 0 !important;
+  padding: 0;
+}
+
+.highlight pre code {
+  padding: 1.25em 1.5em;
+}
+
+.highlight-full .highlight pre,
+#navbarJsExample .highlight pre {
+  max-height: none;
+}
+
+.structure {
+  border-color: #ff3860;
+  border-radius: 3px;
+  padding: 1.5rem;
+}
+
+.structure:before {
+  background: #ff3860;
+  color: #fff;
+  content: "Structure";
+}
+
+.structure-item {
+  position: relative;
+}
+
+.structure-item:before {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: rgba(10, 10, 10, 0.7);
+  background: whitesmoke;
+  border: 1px solid #dbdbdb;
+  content: "";
+  display: block;
+  z-index: 1;
+}
+
+.structure-item:after {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  content: attr(title);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: monospace;
+  font-size: 11px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3px 5px;
+  z-index: 2;
+}
+
+.structure-item.is-structure-container {
+  padding: 1.5rem 0.75rem 0.75rem;
+}
+
+.structure-item.is-structure-container:after {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0.5rem 0.75rem;
+}
+
+.highlight {
+  position: relative;
+}
+
+.highlight .copy,
+.highlight .expand {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: white;
+  border: solid #dbdbdb;
+  border-width: 0 0 1px 1px;
+  color: #7a7a7a;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.highlight .copy:hover,
+.highlight .expand:hover {
+  border-color: #ff3860;
+  color: #ff3860;
+}
+
+.highlight .expand {
+  border-right-width: 1px;
+  right: 50px;
+}
+
+@media screen and (min-width: 769px), print {
+  .highlight pre {
+    white-space: pre-wrap;
+  }
+}
+
+@media screen and (min-width: 769px), print {
+  .section:not(.is-fullwidth) > .example:not(.is-fullwidth) {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .section:not(.is-fullwidth) > .example:not(.is-fullwidth) + .highlight {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+
+.section.is-fullwidth {
+    padding: 0 !important;
+}
+
+.section.is-fullwidth .example {
+  border-left: none;
+  border-radius: 0;
+  border-right: none;
+  padding: 0;
+}
+
+.section.is-fullwidth .example + .highlight {
+  border-left: none;
+  border-radius: 0;
+  border-right: none;
+}

@@ -5,19 +5,28 @@ function onStart()
     $this['bye'] = "Closing footer";
 }
 ==
-<footer class="footer">
-  <div class="container is-primary">
-    <div class="content has-text-centered is-primary">
-      <p>
-        <strong>{{ this.theme.name }}</strong> by <a href="http://sunnyface.com">Kiko Seijo</a>. The source code is licensed
-        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
-      </p>
-      <p>
-        <a class="icon" href="https://github.com/kikoseijo">
-          <i class="fa fa-github"></i>
-        </a>
-      </p>
+<footer>
+  <div class="section is-medium footer-menu">
+    <div class="container is-primary">
+
+      {% partial 'site/footer-nav' %}
+
+    </div>
+  </div>
+
+  <div class="section footer-credits">
+    <div class="container is-primary">
+      <div class="content has-text-centered is-primary">
+        <p>
+          <a href="#dont">{{ this.theme.config.name }}</a> a theme by <a href="http://sunnyface.com">Kiko Seijo</a>.
+          Powered with <a href="https://laravel.com">Laravel</a> and <a href="https://octobercms.com">OctoberCMS</a>.
+        </p>
+        <p>
+          <a class="icon" href="https://github.com/kikoseijo">
+            <i class="fa fa-github"></i>
+          </a>
+        </p>
+      </div>
     </div>
   </div>
 </footer>

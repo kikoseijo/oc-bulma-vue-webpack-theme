@@ -10,7 +10,17 @@ function onStart()
 ==
 <!-- Header -->
 <section class="hero is-medium is-primary is-bold">
-{% partial 'site/header' header_css='hero is-fullheight is-dark' %}
+  {% partial 'site/header' %}
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {{ this.page.title }}
+      </h1>
+      <h2 class="subtitle">
+        {{ this.page.description }}
+      </h2>
+    </div>
+  </div>
 </section>
 <!-- Body -->
 <section class="section">
@@ -21,5 +31,6 @@ function onStart()
     </h2>
   </div>
 </section>
+{% partial 'parts/callout_newsletter' %}
 <!-- Footer -->
 {% partial 'site/footer' %}
