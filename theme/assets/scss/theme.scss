@@ -1,0 +1,15 @@
+/*Bulma*/
+@import "node_modules/bulma/sass/utilities/initial-variables";
+// Defaults
+//@import "colors/pink";
+// Set vars
+$link: $link-color;
+$primary: $primary-color;
+$primary-invert: findColorInvert($primary-color);
+$family-primary: $family-serif;
+//@import "node_modules/bulma/bulma";
+
+/*Components*/
+// @import "components/xxxxxxxx"
+/*Theme*/
+@import "components/home";

@@ -1,0 +1,25 @@
+url = '/page'
+layout = default
+title = 'Page example'
+description = "Single page template"
+==
+function onStart()
+{
+    // $this['close_header'] = false;
+}
+==
+<!-- Header -->
+<section class="hero is-medium is-primary is-bold">
+{% partial 'site/header' header_css='hero is-fullheight is-dark' %}
+</section>
+<!-- Body -->
+<section class="section">
+  <div class="container">
+    <h1 class="title">{{ this.page.title }}</h1>
+    <h2 class="subtitle">
+      A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+    </h2>
+  </div>
+</section>
+<!-- Footer -->
+{% partial 'site/footer' %}

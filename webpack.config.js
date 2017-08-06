@@ -10,7 +10,8 @@ module.exports = {
   entry: {
     main: [
       './src/scripts/main.js',
-      './src/styles/theme.sass'
+      './src/styles/media.sass',
+      './src/styles/vendor.sass'
     ]
   },
   output: {
@@ -43,7 +44,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: './../images/[name].[hash].[ext]'
+              name: './../images/[name].[ext]'
             }
           },
           'img-loader'
@@ -61,12 +62,12 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(['assets/fonts','assets/images', 'assets/scripts'],{
-      root: __dirname + '/theme',
-      verbose: true,
-      dry: false,
-      exclude: ['js.js']
-    }),
+    // new CleanWebpackPlugin(['assets/fonts','assets/images', 'assets/scripts'],{
+    //   root: __dirname + '/theme',
+    //   verbose: true,
+    //   dry: false,
+    //   exclude: ['js.js']
+    // }),
     new webpack.LoaderOptionsPlugin({
       minimize: inProduction,
     }),

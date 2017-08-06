@@ -38,6 +38,7 @@
     "file-loader": "^0.11.2",
     "font-awesome": "github:fortawesome/Font-Awesome",
     "img-loader": "^2.0.0",
+    "jquery": "^3.2.1",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",

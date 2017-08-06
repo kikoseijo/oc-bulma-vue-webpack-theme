@@ -1,0 +1,18 @@
+url = '/'
+layout = default
+description = "Home page"
+==
+function onStart()
+{
+    // $this['close_header'] = false;
+}
+==
+<!-- Header -->
+<section class="hero is-fullheight is-dark">
+{% partial 'site/header' header_css='hero is-fullheight is-dark' %}
+{% partial 'pages/home-head' %}
+</section>
+<!-- Body -->
+{% partial 'pages/home-body' %}
+<!-- Footer -->
+{% partial 'site/footer' %}
