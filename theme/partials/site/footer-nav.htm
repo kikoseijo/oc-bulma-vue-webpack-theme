@@ -11,7 +11,7 @@ description = "Footer Navigation partial"
     </ul>
   </div>
   <div class="column">
-    <h4 class="title is-6">Html Elements</h4>
+    <h4 class="title is-6">Html &amp; CSS Elements</h4>
     <ul>
       {% for element in this.theme.config.elements %}
       <li><a href="/elements/{{element}}" class="{% if show_element == element %} active{% endif %}">{{str_studly(element)}}</a></li>
@@ -19,13 +19,11 @@ description = "Footer Navigation partial"
     </ul>
   </div>
   <div class="column">
-    <h4 class="title is-6">Menu title</h4>
+    <h4 class="title is-6">VueJs Elements</h4>
     <ul>
-      <li><a href="#don">Menu item 1</a></li>
-      <li><a href="#don">Menu item 1</a></li>
-      <li><a href="#don">Menu item 1</a></li>
-      <li><a href="#don">Menu item 1</a></li>
-      <li><a href="#don">Menu item 1</a></li>
+    {% for component in this.theme.config.buefyEl %}
+    <li><a href="/components/{{component}}" class="{% if show_element == component %} active{% endif %}">{{str_studly(component)}}</a></li>
+    {% endfor %}
     </ul>
   </div>
   <div class="column">

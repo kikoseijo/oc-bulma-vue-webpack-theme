@@ -38,7 +38,22 @@ description = "Header Navigation partial"
 
             <hr class="navbar-divider">
             <div class="navbar-item">
-              More elements in &nbsp;<a href="http://bulma.io" class="has-text-primary is-bold" target="_blank">Bulma.io</a>
+              More elements in &nbsp;<span class="tag is-primary"><a href="http://bulma.io" class="is-bold" target="_blank">Bulma.io</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Vue Components
+          </a>
+          <div class="navbar-dropdown is-boxed">
+            {% for component in this.theme.config.buefyEl %}
+            <a href="/components/{{component}}" class="navbar-item{% if show_element == component %} is-active{% endif %}">{{str_studly(component)}}</a>
+            {% endfor %}
+
+            <hr class="navbar-divider">
+            <div class="navbar-item">
+              More components in &nbsp;<span class="tag is-primary"><a href="https://buefy.github.io" class="is-bold" target="_blank">Buefy</a></span>
             </div>
           </div>
         </div>
@@ -129,10 +144,6 @@ description = "Header Navigation partial"
          </a>
        </div>
      </div>
-     <a class="navbar-item " href="http://bulma.io/expo/">
-       <span class="emoji">🎨</span>
-       Expo
-     </a>
      <a class="navbar-item " href="http://bulma.io/love/">
        <span class="emoji">❤️</span>
        Love

@@ -1,20 +1,18 @@
-;;
-url = '/elements/:element_name?'
+url = '/components/:element_name?'
 layout = default
-title = 'Elements page'
-description = "Elements styles you can use right away."
+title = 'Vue components example'
+description = "Vue components example"
 ==
 function onStart()
 {
-    $this['show_element'] = $this->param('element_name') ?? 'grid';
-    $this->page['title'] = ucfirst($this->param('element_name')) ?? 'The Grid';
+    $this['show_element'] = $this->param('element_name') ?? 'notifications';
+    $this->page['title'] = ucfirst($this->param('element_name')) ?? 'Notifications';
 }
 ==
-{##}
 <!-- Header -->
 <section class="hero is-medium is-primary is-bold">
-{% partial 'site/header' %}
-<div class="hero-body">
+  {% partial 'site/header' %}
+  <div class="hero-body">
     <div class="container">
       <h1 class="title">
         {{ this.page.title }}
@@ -26,9 +24,9 @@ function onStart()
   </div>
 </section>
 <!-- Body -->
-
-{% content 'demo/bulma/' ~ show_element  ~ '.htm' %}
-
+<section class="section">
+  <ks-{{show_element}}></ks-{{show_element}}>
+</section>
 {% partial 'parts/callout_newsletter' %}
 <!-- Footer -->
 {% partial 'site/footer' %}

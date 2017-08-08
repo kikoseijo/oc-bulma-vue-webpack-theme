@@ -5,9 +5,10 @@ description = "Single page template"
 ==
 function onStart()
 {
-    // $this['close_header'] = false;
+    $this['show_element'] = 'notifications';
 }
 ==
+{##}
 <!-- Header -->
 <section class="hero is-medium is-primary is-bold">
   {% partial 'site/header' %}
@@ -23,14 +24,7 @@ function onStart()
   </div>
 </section>
 <!-- Body -->
-<section class="section">
-  <div class="container">
-    <h1 class="title">{{ this.page.title }}</h1>
-    <h2 class="subtitle">
-      A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-    </h2>
-  </div>
-</section>
+{% content 'demo/buefi/' ~ show_element  ~ '.htm' %}
 {% partial 'parts/callout_newsletter' %}
 <!-- Footer -->
 {% partial 'site/footer' %}

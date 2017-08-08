@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var WebpackNotifierPlugin = require('webpack-notifier');
 var inProduction = (process.env.NODE_ENV === 'production');
@@ -19,22 +19,44 @@ module.exports = {
     filename: '[name].js',
   },
   module: {
-    rules: [{
+    rules: [
+      {
+				test: /\.js$/, // include .js files
+				enforce: 'pre', // preload the jshint loader
+				exclude: /node_modules/, // exclude any and all files in the node_modules folder
+				use: [
+					{
+						loader: 'jshint-loader'
+					}
+				]
+			},
+      {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
+        loader: 'babel-loader'
+      },
+      {
+        enforce: 'pre',
+        test: /\.vue$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.vue$/,
+        exclude: /node_modules/,
+        loader: 'vue-loader'
       },
       {
         test: /\.s[ac]ss$/,
         use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
+          fallback: 'style-loader',
           use: ['css-loader', 'sass-loader']
         })
       },
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
+          fallback: 'style-loader',
           use: ['css-loader']
         })
       },
@@ -61,6 +83,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      'vue$': 'vue/dist/vue.esm.js' //vue.esm.js 'vue/dist/vue.common.js' for webpack 1
       //clipboard: '/node_modules/clipboard/dist/clipboard',
     }
   },
@@ -89,11 +112,11 @@ module.exports = {
 
 if (inProduction) {
   module.exports.plugins.push(
-    new ExtractTextPlugin("./../css/theme.min.css"),
+    new ExtractTextPlugin('./../css/theme.min.css'),
     new webpack.optimize.UglifyJsPlugin()
   );
 } else {
   module.exports.plugins.push(
-    new ExtractTextPlugin("./../css/theme.css")
+    new ExtractTextPlugin('./../css/theme.css')
   );
 }

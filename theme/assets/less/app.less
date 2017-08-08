@@ -2,6 +2,10 @@ body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 a { color: @link-color; }
+.emoji {  margin-right: 0.5em;  margin-top: 2px;}
+.hero-icon { margin-bottom:1em;}
+.microCard {  padding: 30px 20px; display: -webkit-box; display: -ms-flexbox; display: flex; margin-right: 1rem; -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, .15);
+box-shadow: 0 1px 5px rgba(0, 0, 0, .15); border-radius: 3px; position: relative; width: 100% }
 
 .page-home .navbar { padding: 20px 0; min-height:(3.25rem + 1.6);  }
 nav.navbar.is-transparent { background-color:transparent; box-shadow: 0 1px 0 rgba(245, 247, 250, 0.2); }
@@ -12,7 +16,7 @@ nav.navbar.is-transparent .navbar-link::after {  border-color: #fff - @primary-c
   background:
   linear-gradient(fade(@primary-color, 60%),fade(#fff, 60%)),
   linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),
-  url('https://source.unsplash.com/2000x1000?tech,design');
+  url('../images/photo-intro.jpg');
 }
 .hero.is-primary .navbar-menu,
 .hero.is-dark .navbar-menu {

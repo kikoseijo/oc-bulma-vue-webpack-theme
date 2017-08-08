@@ -1,5 +1,83 @@
+import Vue from 'vue';
+import Buefy from 'buefy';
 window.$ = window.jQuery = require('jquery');
 var Clipboard = require('clipboard');
+// require('buefy/lib/buefy.css');
+
+import KsFields from './components/buefy/fields.vue';
+import KsIcon from './components/buefy/icon.vue';
+import KsMenu from './components/buefy/menu.vue';
+import KsModal from './components/buefy/modal.vue';
+import KsNotifications from './components/buefy/notifications.vue';
+import KsPagination from './components/buefy/pagination.vue';
+import KsDropdown from './components/buefy/dropdown.vue';
+import KsTabs from './components/buefy/tabs.vue';
+
+import KsCard from './components/bulma/card.vue';
+
+import KsExamples from './components/examples.vue';
+
+$(document).ready(function(){
+  Vue.filter('pre', (text) => {
+    if (!text) return;
+    text = text.replace(/^\s*[\r\n]/g, '');
+    const whitespaces = /^[ \t]*./.exec(text).toString().slice(0, -1);
+    let newText = [];
+    text.split(/\r\n|\r|\n/).forEach((line) => {
+        newText.push(line.replace(whitespaces, ''));
+    });
+    newText = newText.join('\r\n');
+    return newText;
+  });
+
+  Vue.directive('highlight', {
+    deep: true,
+    bind(el, binding) {
+      // On first bind, highlight all targets
+      const targets = el.querySelectorAll('code');
+      for (const target of targets) {
+        // if a value is directly assigned to the directive, use this
+        // instead of the element content.
+        if (binding.value) {
+          target.innerHTML = binding.value;
+        }
+        hljs.highlightBlock(target);
+      }
+    },
+    componentUpdated(el, binding) {
+      // After an update, re-fill the content and then highlight
+      const targets = el.querySelectorAll('code');
+      for (const target of targets) {
+        if (binding.value) {
+          target.innerHTML = binding.value;
+          hljs.highlightBlock(target);
+        }
+      }
+    }
+  });
+
+  Vue.use(Buefy, {
+    defaultIconPack: 'fa',
+    defaultSnackbarDuration: 2500
+  });
+
+  new Vue({
+    el: '.oc-bulma-app',
+    data: {
+      isMsgActive: true,
+      isNotifActive: true,
+      isLoading: false
+    },
+    components: { KsCard, KsFields, KsTabs, KsNotifications, KsIcon, KsMenu, KsModal, KsPagination, KsDropdown },
+    methods: KsExamples
+  });
+});
+
+
+
+
+
+
 
 
 $(document).ready(function(){
@@ -120,27 +198,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Clipboard
 
-  var $highlights = getAll('.highlight');
-  var itemsProcessed = 0;
 
-  if ($highlights.length > 0) {
-    $highlights.forEach(function ($el) {
-      var copy = '<button class="copy">Copy</button>';
-      var expand = '<button class="expand">Expand</button>';
-      $el.insertAdjacentHTML('beforeend', copy);
 
-      if ($el.firstElementChild.scrollHeight > 480 && $el.firstElementChild.clientHeight <= 480) {
-        $el.insertAdjacentHTML('beforeend', expand);
-      }
+  function makeHighlights () {
+    var $highlights = getAll('.highlight');
+    var itemsProcessed = 0;
 
-      itemsProcessed++;
-      if (itemsProcessed === $highlights.length) {
-        addHighlightControls();
-      }
-    });
+    if ($highlights.length > 0) {
+      $highlights.forEach(function ($el) {
+        var copy = '<button class="copy">Copy</button>';
+        var expand = '<button class="expand">Expand</button>';
+        $el.insertAdjacentHTML('beforeend', copy);
+
+        if ($el.firstElementChild.scrollHeight > 480 && $el.firstElementChild.clientHeight <= 480) {
+          $el.insertAdjacentHTML('beforeend', expand);
+        }
+
+        itemsProcessed++;
+        if (itemsProcessed === $highlights.length) {
+          addHighlightControls();
+        }
+      });
+    }
   }
-
-  function addHighlightControls() {
+  function addHighlightControls () {
     var $highlightButtons = getAll('.highlight .copy, .highlight .expand');
 
     $highlightButtons.forEach(function ($el) {
@@ -161,6 +242,10 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  setTimeout(() => {
+    makeHighlights ();
+  }, 10 * 400);
 
   new Clipboard('.copy', {
     target: function target(trigger) {
