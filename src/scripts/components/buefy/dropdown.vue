@@ -463,7 +463,7 @@
               <b-dropdown-item>Another action</b-dropdown-item>
               <b-dropdown-item>Something else</b-dropdown-item>
           </b-dropdown>`,
-          template2: `
+        template2: `
           <nav class="navbar">
               <div class="navbar-brand">
                   <a class="navbar-item">
@@ -514,7 +514,7 @@
                   </div>
               </div>
           </nav>`,
-          template3: `
+        template3: `
           <nav class="navbar">
               <div class="navbar-brand">
                   <a class="navbar-item">
@@ -567,7 +567,7 @@
                   </div>
               </div>
           </nav>`,
-          code3: `
+        code3: `
           export default {
               data() {
                   return {
@@ -575,7 +575,7 @@
                   }
               }
           }`,
-          template4: `
+        template4: `
           <b-dropdown v-model="isPublic">
               <button class="button is-primary" type="button" slot="trigger">
                   <template v-if="isPublic">
@@ -609,7 +609,7 @@
                   </div>
               </b-dropdown-item>
           </b-dropdown>`,
-          code4: `
+        code4: `
           export default {
               data() {
                   return {

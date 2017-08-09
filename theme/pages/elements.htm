@@ -1,8 +1,8 @@
 ;;
 url = '/elements/:element_name?'
 layout = default
-title = 'Elements page'
-description = "Elements styles you can use right away."
+title = 'Styles & Elements examples'
+description = "Styles & Elements from Bulma CSS"
 ==
 function onStart()
 {
@@ -10,7 +10,6 @@ function onStart()
     $this->page['title'] = ucfirst($this->param('element_name')) ?? 'The Grid';
 }
 ==
-{##}
 <!-- Header -->
 <section class="hero is-medium is-primary is-bold">
 {% partial 'site/header' %}

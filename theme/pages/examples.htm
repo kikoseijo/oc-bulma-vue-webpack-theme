@@ -1,18 +1,19 @@
-url = '/components/:element_name?'
+;;
+url = '/page-examples/:element_name?'
 layout = default
-title = 'Buefy (VueJs) examples'
-description = "VueJs components ready to use"
+title = 'Page examples template'
+description = "This page serves as skeleton for other partials/content blocks."
 ==
 function onStart()
 {
-    $this['show_element'] = $this->param('element_name') ?? 'notifications';
-    $this->page['title'] = ucfirst($this->param('element_name')) ?? 'Notifications';
+    $this['show_element'] = $this->param('element_name') ?? 'grid';
+    $this->page['title'] = ucfirst($this->param('element_name')) ?? 'The Grid';
 }
 ==
 <!-- Header -->
 <section class="hero is-medium is-primary is-bold">
-  {% partial 'site/header' %}
-  <div class="hero-body">
+{% partial 'site/header' %}
+<div class="hero-body">
     <div class="container">
       <h1 class="title">
         {{ this.page.title }}
@@ -24,9 +25,9 @@ function onStart()
   </div>
 </section>
 <!-- Body -->
-<section class="section">
-  <ks-{{show_element}}></ks-{{show_element}}>
-</section>
+
+{% content 'demo/bulma/' ~ show_element  ~ '.htm' %}
+
 {% partial 'parts/callout_newsletter' %}
 <!-- Footer -->
 {% partial 'site/footer' %}
