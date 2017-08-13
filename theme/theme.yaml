@@ -4,7 +4,7 @@ author: 'Kiko Seijo'
 homepage: 'http://sunnyface.com'
 elements: ['responsive', 'hero', 'grid','box','buttons','tiles','timeline', 'card', 'typography', 'message', 'notification', 'table', 'form']
 buefyEl: ['fields', 'notifications', 'tabs', 'icon', 'menu', 'modal', 'pagination']
-pagesExamples: ['product-detail', 'register', 'blog']
+pagesExamples: ['product-detail', 'register', 'blog', 'blog-2']
 #require:
 #    - Acme.User
 #    - Acme.Blog
@@ -23,7 +23,7 @@ form:
 
         primary_color:
             label: Primary color
-            type: colorpicker
+            type: dropdown
             assetVar: 'primary-color'
             default: '#ffb3b3'
 
