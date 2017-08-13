@@ -12,9 +12,11 @@ description = "Default layout"
         <meta name="generator" content="Webpack+Bulma+Vue+Font-Awesome">
         <link rel="icon" type="image/png" href="{{ 'assets/images/icon.png'|theme }}">
         <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
-        <link href="{{ ['assets/less/app.less']|theme }}" rel="stylesheet">
+        <link href="{{ [
+            'assets/less/app.less',
+            'assets/less/demo.less'
+        ]|theme }}" rel="stylesheet">
         {% styles %}
         {% placeholder head %}
     </head>

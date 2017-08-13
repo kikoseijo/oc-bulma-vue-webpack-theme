@@ -6,10 +6,11 @@ description = "This page serves as skeleton for other partials/content blocks."
 ==
 function onStart()
 {
-    $this['show_element'] = $this->param('element_name') ?? 'grid';
-    $this->page['title'] = ucfirst($this->param('element_name')) ?? 'The Grid';
+    $this['show_element'] = $this->param('element_name') ?? 'product-detail';
+    $this->page['title'] = ucfirst(Str::studly($this->param('element_name'))) ?? 'The Grid';
 }
 ==
+{% if show_element != 'register'%}
 <!-- Header -->
 <section class="hero is-medium is-primary is-bold">
 {% partial 'site/header' %}
@@ -24,10 +25,14 @@ function onStart()
     </div>
   </div>
 </section>
-<!-- Body -->
 
-{% content 'demo/bulma/' ~ show_element  ~ '.htm' %}
+<!-- Body -->
+{% content 'demo/pages/' ~ show_element  ~ '.htm' %}
 
 {% partial 'parts/callout_newsletter' %}
 <!-- Footer -->
 {% partial 'site/footer' %}
+
+{% else %}
+{% content 'demo/pages/' ~ show_element  ~ '.htm' %}
+{% endif %}

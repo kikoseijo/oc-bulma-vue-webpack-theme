@@ -4,6 +4,7 @@ author: 'Kiko Seijo'
 homepage: 'http://sunnyface.com'
 elements: ['responsive', 'hero', 'grid','box','buttons','tiles','timeline', 'card', 'typography', 'message', 'notification', 'table', 'form']
 buefyEl: ['fields', 'notifications', 'tabs', 'icon', 'menu', 'modal', 'pagination']
+pagesExamples: ['product-detail', 'register', 'blog']
 #require:
 #    - Acme.User
 #    - Acme.Blog

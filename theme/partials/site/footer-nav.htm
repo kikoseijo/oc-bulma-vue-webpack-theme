@@ -4,10 +4,9 @@ description = "Footer Navigation partial"
   <div class="column">
     <h4 class="title is-6">Page examples</h4>
     <ul>
-      <li><a href="#don">Blog</a></li>
-      <li><a href="#don">Blog item</a></li>
-      <li><a href="#don">Online Shop</a></li>
-      <li><a href="#don">Portfolio</a></li>
+      {% for element in this.theme.config.pagesExamples %}
+      <li><a href="/page-examples/{{element}}" class="{% if show_element == element %} active{% endif %}">{{str_studly(element)}}</a></li>
+      {% endfor %}
     </ul>
   </div>
   <div class="column">

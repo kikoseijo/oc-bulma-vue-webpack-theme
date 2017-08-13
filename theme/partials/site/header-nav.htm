@@ -62,8 +62,8 @@ description = "Header Navigation partial"
           Examples
         </a>
         <div class="navbar-dropdown is-boxed">
-          {% for component in this.theme.config.buefyEl %}
-            <a href="/components/{{component}}" class="navbar-item{% if show_element == component %} is-active{% endif %}">{{str_studly(component)}}</a>
+          {% for component in this.theme.config.pagesExamples %}
+            <a href="/page-examples/{{component}}" class="navbar-item{% if show_element == component %} is-active{% endif %}">{{str_studly(component)}}</a>
           {% endfor %}
         </div>
      </div>
