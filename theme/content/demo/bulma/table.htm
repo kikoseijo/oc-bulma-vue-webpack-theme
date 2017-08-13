@@ -1,0 +1,1057 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">Tables</h1>
+    <h2 class="subtitle">The inevitable HTML <strong>table</strong>, with special case cells</h2>
+    <div id="meta" class="field is-grouped is-grouped-multiline">
+
+
+
+
+
+
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Colors</span>
+
+        <span class="tag is-danger">No</span>
+
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Sizes</span>
+
+        <span class="tag is-danger">No</span>
+
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Variables</span>
+
+        <a class="tag is-success" href="#variables">Yes</a>
+
+    </div>
+  </div>
+</div>
+
+
+    <hr>
+
+    <div class="content">
+      <p>You simply need to attach a single <code>.table</code> CSS class on a <code>&lt;table&gt;</code> with the following structure:</p>
+      <ul>
+        <li>
+          <code>table</code> the main <strong>container</strong>
+          <ul>
+            <li>
+              <code>thead</code> the optional <strong>top</strong> part of the table
+            </li>
+            <li>
+              <code>tfoot</code> the optional <strong>bottom</strong> part of the table
+            </li>
+            <li>
+              <code>tbody</code> the main <strong>content</strong> of the table
+              <ul>
+                <li>
+                  <code>tr</code> each table <strong>row</strong>
+                  <ul>
+                    <li>
+                      <code>th</code> a table cell <strong>heading</strong>
+                    </li>
+                    <li>
+                      <code>td</code> a table <strong>cell</strong>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        <span class="tag is-success">New!</span>
+        <span class="tag is-info">0.4.2</span>
+      </p>
+      <p>
+        You can set a table row as <strong>selected</strong> by appending the <code>is-selected</code> modifier on a <code>&lt;tr&gt;</code>
+      </p>
+    </div>
+
+    <div class="example">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th><abbr title="Position">Pos</abbr></th>
+      <th>Team</th>
+      <th><abbr title="Played">Pld</abbr></th>
+      <th><abbr title="Won">W</abbr></th>
+      <th><abbr title="Drawn">D</abbr></th>
+      <th><abbr title="Lost">L</abbr></th>
+      <th><abbr title="Goals for">GF</abbr></th>
+      <th><abbr title="Goals against">GA</abbr></th>
+      <th><abbr title="Goal difference">GD</abbr></th>
+      <th><abbr title="Points">Pts</abbr></th>
+      <th>Qualification or relegation</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th><abbr title="Position">Pos</abbr></th>
+      <th>Team</th>
+      <th><abbr title="Played">Pld</abbr></th>
+      <th><abbr title="Won">W</abbr></th>
+      <th><abbr title="Drawn">D</abbr></th>
+      <th><abbr title="Lost">L</abbr></th>
+      <th><abbr title="Goals for">GF</abbr></th>
+      <th><abbr title="Goals against">GA</abbr></th>
+      <th><abbr title="Goal difference">GD</abbr></th>
+      <th><abbr title="Points">Pts</abbr></th>
+      <th>Qualification or relegation</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
+      </td>
+      <td>38</td>
+      <td>23</td>
+      <td>12</td>
+      <td>3</td>
+      <td>68</td>
+      <td>36</td>
+      <td>+32</td>
+      <td>81</td>
+      <td>Qualification for the <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage" title="2016–17 UEFA Champions League">Champions League group stage</a></td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td><a href="https://en.wikipedia.org/wiki/Arsenal_F.C." title="Arsenal F.C.">Arsenal</a></td>
+      <td>38</td>
+      <td>20</td>
+      <td>11</td>
+      <td>7</td>
+      <td>65</td>
+      <td>36</td>
+      <td>+29</td>
+      <td>71</td>
+      <td>Qualification for the <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage" title="2016–17 UEFA Champions League">Champions League group stage</a></td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td><a href="https://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C." title="Tottenham Hotspur F.C.">Tottenham Hotspur</a></td>
+      <td>38</td>
+      <td>19</td>
+      <td>13</td>
+      <td>6</td>
+      <td>69</td>
+      <td>35</td>
+      <td>+34</td>
+      <td>70</td>
+      <td>Qualification for the <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage" title="2016–17 UEFA Champions League">Champions League group stage</a></td>
+    </tr>
+    <tr class="is-selected">
+      <th>4</th>
+      <td><a href="https://en.wikipedia.org/wiki/Manchester_City_F.C." title="Manchester City F.C.">Manchester City</a></td>
+      <td>38</td>
+      <td>19</td>
+      <td>9</td>
+      <td>10</td>
+      <td>71</td>
+      <td>41</td>
+      <td>+30</td>
+      <td>66</td>
+      <td>Qualification for the <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Play-off_round" title="2016–17 UEFA Champions League">Champions League play-off round</a></td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td><a href="https://en.wikipedia.org/wiki/Manchester_United_F.C." title="Manchester United F.C.">Manchester United</a></td>
+      <td>38</td>
+      <td>19</td>
+      <td>9</td>
+      <td>10</td>
+      <td>49</td>
+      <td>35</td>
+      <td>+14</td>
+      <td>66</td>
+      <td>Qualification for the <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Europa_League#Group_stage" title="2016–17 UEFA Europa League">Europa League group stage</a></td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td><a href="https://en.wikipedia.org/wiki/Southampton_F.C." title="Southampton F.C.">Southampton</a></td>
+      <td>38</td>
+      <td>18</td>
+      <td>9</td>
+      <td>11</td>
+      <td>59</td>
+      <td>41</td>
+      <td>+18</td>
+      <td>63</td>
+      <td>Qualification for the <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Europa_League#Group_stage" title="2016–17 UEFA Europa League">Europa League group stage</a></td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td><a href="https://en.wikipedia.org/wiki/West_Ham_United_F.C." title="West Ham United F.C.">West Ham United</a></td>
+      <td>38</td>
+      <td>16</td>
+      <td>14</td>
+      <td>8</td>
+      <td>65</td>
+      <td>51</td>
+      <td>+14</td>
+      <td>62</td>
+      <td>Qualification for the <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Europa_League#Third_qualifying_round" title="2016–17 UEFA Europa League">Europa League third qualifying round</a></td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td><a href="https://en.wikipedia.org/wiki/Liverpool_F.C." title="Liverpool F.C.">Liverpool</a></td>
+      <td>38</td>
+      <td>16</td>
+      <td>12</td>
+      <td>10</td>
+      <td>63</td>
+      <td>50</td>
+      <td>+13</td>
+      <td>60</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td><a href="https://en.wikipedia.org/wiki/Stoke_City_F.C." title="Stoke City F.C.">Stoke City</a></td>
+      <td>38</td>
+      <td>14</td>
+      <td>9</td>
+      <td>15</td>
+      <td>41</td>
+      <td>55</td>
+      <td>−14</td>
+      <td>51</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td><a href="https://en.wikipedia.org/wiki/Chelsea_F.C." title="Chelsea F.C.">Chelsea</a></td>
+      <td>38</td>
+      <td>12</td>
+      <td>14</td>
+      <td>12</td>
+      <td>59</td>
+      <td>53</td>
+      <td>+6</td>
+      <td>50</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td><a href="https://en.wikipedia.org/wiki/Everton_F.C." title="Everton F.C.">Everton</a></td>
+      <td>38</td>
+      <td>11</td>
+      <td>14</td>
+      <td>13</td>
+      <td>59</td>
+      <td>55</td>
+      <td>+4</td>
+      <td>47</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td><a href="https://en.wikipedia.org/wiki/Swansea_City_A.F.C." title="Swansea City A.F.C.">Swansea City</a></td>
+      <td>38</td>
+      <td>12</td>
+      <td>11</td>
+      <td>15</td>
+      <td>42</td>
+      <td>52</td>
+      <td>−10</td>
+      <td>47</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td><a href="https://en.wikipedia.org/wiki/Watford_F.C." title="Watford F.C.">Watford</a></td>
+      <td>38</td>
+      <td>12</td>
+      <td>9</td>
+      <td>17</td>
+      <td>40</td>
+      <td>50</td>
+      <td>−10</td>
+      <td>45</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td><a href="https://en.wikipedia.org/wiki/West_Bromwich_Albion_F.C." title="West Bromwich Albion F.C.">West Bromwich Albion</a></td>
+      <td>38</td>
+      <td>10</td>
+      <td>13</td>
+      <td>15</td>
+      <td>34</td>
+      <td>48</td>
+      <td>−14</td>
+      <td>43</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td><a href="https://en.wikipedia.org/wiki/Crystal_Palace_F.C." title="Crystal Palace F.C.">Crystal Palace</a></td>
+      <td>38</td>
+      <td>11</td>
+      <td>9</td>
+      <td>18</td>
+      <td>39</td>
+      <td>51</td>
+      <td>−12</td>
+      <td>42</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td><a href="https://en.wikipedia.org/wiki/A.F.C._Bournemouth" title="A.F.C. Bournemouth">AFC Bournemouth</a></td>
+      <td>38</td>
+      <td>11</td>
+      <td>9</td>
+      <td>18</td>
+      <td>45</td>
+      <td>67</td>
+      <td>−22</td>
+      <td>42</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td><a href="https://en.wikipedia.org/wiki/Sunderland_A.F.C." title="Sunderland A.F.C.">Sunderland</a></td>
+      <td>38</td>
+      <td>9</td>
+      <td>12</td>
+      <td>17</td>
+      <td>48</td>
+      <td>62</td>
+      <td>−14</td>
+      <td>39</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td><a href="https://en.wikipedia.org/wiki/Newcastle_United_F.C." title="Newcastle United F.C.">Newcastle United</a> <strong>(R)</strong>
+      </td>
+      <td>38</td>
+      <td>9</td>
+      <td>10</td>
+      <td>19</td>
+      <td>44</td>
+      <td>65</td>
+      <td>−21</td>
+      <td>37</td>
+      <td>Relegation to the <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_Football_League_Championship" title="2016–17 Football League Championship">Football League Championship</a></td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td><a href="https://en.wikipedia.org/wiki/Norwich_City_F.C." title="Norwich City F.C.">Norwich City</a> <strong>(R)</strong>
+      </td>
+      <td>38</td>
+      <td>9</td>
+      <td>7</td>
+      <td>22</td>
+      <td>39</td>
+      <td>67</td>
+      <td>−28</td>
+      <td>34</td>
+      <td>Relegation to the <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_Football_League_Championship" title="2016–17 Football League Championship">Football League Championship</a></td>    </tr>
+    <tr>
+      <th>20</th>
+      <td><a href="https://en.wikipedia.org/wiki/Aston_Villa_F.C." title="Aston Villa F.C.">Aston Villa</a> <strong>(R)</strong>
+      </td>
+      <td>38</td>
+      <td>3</td>
+      <td>8</td>
+      <td>27</td>
+      <td>27</td>
+      <td>76</td>
+      <td>−49</td>
+      <td>17</td>
+      <td>Relegation to the <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_Football_League_Championship" title="2016–17 Football League Championship">Football League Championship</a></td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Position"</span><span class="nt">&gt;</span>Pos<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Team<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Played"</span><span class="nt">&gt;</span>Pld<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Won"</span><span class="nt">&gt;</span>W<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Drawn"</span><span class="nt">&gt;</span>D<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Lost"</span><span class="nt">&gt;</span>L<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Goals for"</span><span class="nt">&gt;</span>GF<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Goals against"</span><span class="nt">&gt;</span>GA<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Goal difference"</span><span class="nt">&gt;</span>GD<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Points"</span><span class="nt">&gt;</span>Pts<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Qualification or relegation<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tfoot&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Position"</span><span class="nt">&gt;</span>Pos<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Team<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Played"</span><span class="nt">&gt;</span>Pld<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Won"</span><span class="nt">&gt;</span>W<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Drawn"</span><span class="nt">&gt;</span>D<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Lost"</span><span class="nt">&gt;</span>L<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Goals for"</span><span class="nt">&gt;</span>GF<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Goals against"</span><span class="nt">&gt;</span>GA<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Goal difference"</span><span class="nt">&gt;</span>GD<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"Points"</span><span class="nt">&gt;</span>Pts<span class="nt">&lt;/abbr&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Qualification or relegation<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tfoot&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Leicester_City_F.C."</span> <span class="na">title=</span><span class="s">"Leicester City F.C."</span><span class="nt">&gt;</span>Leicester City<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;strong&gt;</span>(C)<span class="nt">&lt;/strong&gt;</span>
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>23<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>12<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>3<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>68<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>36<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>+32<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>81<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Qualification for the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage"</span> <span class="na">title=</span><span class="s">"2016–17 UEFA Champions League"</span><span class="nt">&gt;</span>Champions League group stage<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Arsenal_F.C."</span> <span class="na">title=</span><span class="s">"Arsenal F.C."</span><span class="nt">&gt;</span>Arsenal<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>20<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>11<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>7<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>65<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>36<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>+29<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>71<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Qualification for the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage"</span> <span class="na">title=</span><span class="s">"2016–17 UEFA Champions League"</span><span class="nt">&gt;</span>Champions League group stage<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C."</span> <span class="na">title=</span><span class="s">"Tottenham Hotspur F.C."</span><span class="nt">&gt;</span>Tottenham Hotspur<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>19<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>13<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>6<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>69<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>35<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>+34<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>70<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Qualification for the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage"</span> <span class="na">title=</span><span class="s">"2016–17 UEFA Champions League"</span><span class="nt">&gt;</span>Champions League group stage<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"is-selected"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;th&gt;</span>4<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Manchester_City_F.C."</span> <span class="na">title=</span><span class="s">"Manchester City F.C."</span><span class="nt">&gt;</span>Manchester City<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>19<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>9<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>10<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>71<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>41<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>+30<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>66<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Qualification for the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Play-off_round"</span> <span class="na">title=</span><span class="s">"2016–17 UEFA Champions League"</span><span class="nt">&gt;</span>Champions League play-off round<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>5<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Manchester_United_F.C."</span> <span class="na">title=</span><span class="s">"Manchester United F.C."</span><span class="nt">&gt;</span>Manchester United<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>19<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>9<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>10<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>49<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>35<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>+14<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>66<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Qualification for the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Europa_League#Group_stage"</span> <span class="na">title=</span><span class="s">"2016–17 UEFA Europa League"</span><span class="nt">&gt;</span>Europa League group stage<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>6<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Southampton_F.C."</span> <span class="na">title=</span><span class="s">"Southampton F.C."</span><span class="nt">&gt;</span>Southampton<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>18<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>9<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>11<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>59<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>41<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>+18<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>63<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Qualification for the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Europa_League#Group_stage"</span> <span class="na">title=</span><span class="s">"2016–17 UEFA Europa League"</span><span class="nt">&gt;</span>Europa League group stage<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>7<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/West_Ham_United_F.C."</span> <span class="na">title=</span><span class="s">"West Ham United F.C."</span><span class="nt">&gt;</span>West Ham United<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>14<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>8<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>65<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>51<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>+14<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>62<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Qualification for the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Europa_League#Third_qualifying_round"</span> <span class="na">title=</span><span class="s">"2016–17 UEFA Europa League"</span><span class="nt">&gt;</span>Europa League third qualifying round<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>8<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Liverpool_F.C."</span> <span class="na">title=</span><span class="s">"Liverpool F.C."</span><span class="nt">&gt;</span>Liverpool<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>12<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>10<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>63<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>50<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>+13<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>60<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>9<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Stoke_City_F.C."</span> <span class="na">title=</span><span class="s">"Stoke City F.C."</span><span class="nt">&gt;</span>Stoke City<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>14<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>9<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>15<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>41<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>55<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>−14<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>51<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>10<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Chelsea_F.C."</span> <span class="na">title=</span><span class="s">"Chelsea F.C."</span><span class="nt">&gt;</span>Chelsea<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>12<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>14<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>12<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>59<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>53<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>+6<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>50<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>11<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Everton_F.C."</span> <span class="na">title=</span><span class="s">"Everton F.C."</span><span class="nt">&gt;</span>Everton<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>11<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>14<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>13<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>59<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>55<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>+4<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>47<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>12<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Swansea_City_A.F.C."</span> <span class="na">title=</span><span class="s">"Swansea City A.F.C."</span><span class="nt">&gt;</span>Swansea City<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>12<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>11<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>15<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>42<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>52<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>−10<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>47<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>13<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Watford_F.C."</span> <span class="na">title=</span><span class="s">"Watford F.C."</span><span class="nt">&gt;</span>Watford<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>12<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>9<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>17<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>40<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>50<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>−10<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>45<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>14<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/West_Bromwich_Albion_F.C."</span> <span class="na">title=</span><span class="s">"West Bromwich Albion F.C."</span><span class="nt">&gt;</span>West Bromwich Albion<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>10<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>13<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>15<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>34<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>48<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>−14<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>43<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>15<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Crystal_Palace_F.C."</span> <span class="na">title=</span><span class="s">"Crystal Palace F.C."</span><span class="nt">&gt;</span>Crystal Palace<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>11<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>9<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>18<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>39<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>51<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>−12<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>42<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>16<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/A.F.C._Bournemouth"</span> <span class="na">title=</span><span class="s">"A.F.C. Bournemouth"</span><span class="nt">&gt;</span>AFC Bournemouth<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>11<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>9<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>18<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>45<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>67<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>−22<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>42<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>17<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Sunderland_A.F.C."</span> <span class="na">title=</span><span class="s">"Sunderland A.F.C."</span><span class="nt">&gt;</span>Sunderland<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>9<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>12<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>17<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>48<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>62<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>−14<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>39<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>18<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Newcastle_United_F.C."</span> <span class="na">title=</span><span class="s">"Newcastle United F.C."</span><span class="nt">&gt;</span>Newcastle United<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;strong&gt;</span>(R)<span class="nt">&lt;/strong&gt;</span>
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>9<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>10<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>19<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>44<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>65<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>−21<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>37<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Relegation to the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/2016%E2%80%9317_Football_League_Championship"</span> <span class="na">title=</span><span class="s">"2016–17 Football League Championship"</span><span class="nt">&gt;</span>Football League Championship<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>19<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Norwich_City_F.C."</span> <span class="na">title=</span><span class="s">"Norwich City F.C."</span><span class="nt">&gt;</span>Norwich City<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;strong&gt;</span>(R)<span class="nt">&lt;/strong&gt;</span>
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>9<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>7<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>22<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>39<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>67<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>−28<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>34<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Relegation to the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/2016%E2%80%9317_Football_League_Championship"</span> <span class="na">title=</span><span class="s">"2016–17 Football League Championship"</span><span class="nt">&gt;</span>Football League Championship<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>20<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/Aston_Villa_F.C."</span> <span class="na">title=</span><span class="s">"Aston Villa F.C."</span><span class="nt">&gt;</span>Aston Villa<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;strong&gt;</span>(R)<span class="nt">&lt;/strong&gt;</span>
+      <span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>38<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>3<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>8<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>27<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>27<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>76<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>−49<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>17<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Relegation to the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://en.wikipedia.org/wiki/2016%E2%80%9317_Football_League_Championship"</span> <span class="na">title=</span><span class="s">"2016–17 Football League Championship"</span><span class="nt">&gt;</span>Football League Championship<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+    <hr>
+
+    <h3 class="title">Modifiers</h3>
+
+    <div class="columns">
+      <div class="column">
+        <p>Add <strong>borders</strong> to all the cells.</p>
+      </div>
+      <div class="column">
+        <code>table is-bordered</code>
+      </div>
+      <div class="column is-half">
+        <table class="table is-bordered">
+          <thead>
+            <tr>
+              <th>One</th>
+              <th>Two</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Three</td>
+              <td>Four</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <p>Add <strong>stripes</strong> to the table.</p>
+      </div>
+      <div class="column">
+        <code>table is-striped</code>
+      </div>
+      <div class="column is-half">
+        <table class="table is-striped">
+          <thead>
+            <tr>
+              <th>One</th>
+              <th>Two</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Three</td>
+              <td>Four</td>
+            </tr>
+            <tr>
+              <td>Five</td>
+              <td>Six</td>
+            </tr>
+            <tr>
+              <td>Seven</td>
+              <td>Eight</td>
+            </tr>
+            <tr>
+              <td>Nine</td>
+              <td>Ten</td>
+            </tr>
+            <tr>
+              <td>Eleven</td>
+              <td>Twelve</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <p>Make the cells <strong>narrower</strong>.</p>
+      </div>
+      <div class="column">
+        <code>table is-narrow</code>
+      </div>
+      <div class="column is-half">
+        <table class="table is-narrow">
+          <thead>
+            <tr>
+              <th>One</th>
+              <th>Two</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Three</td>
+              <td>Four</td>
+            </tr>
+            <tr>
+              <td>Five</td>
+              <td>Six</td>
+            </tr>
+            <tr>
+              <td>Seven</td>
+              <td>Eight</td>
+            </tr>
+            <tr>
+              <td>Nine</td>
+              <td>Ten</td>
+            </tr>
+            <tr>
+              <td>Eleven</td>
+              <td>Twelve</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <p>You can have a <strong>fullwidth</strong> table.</p>
+      </div>
+      <div class="column">
+        <code>table is-fullwidth</code>
+      </div>
+      <div class="column is-half">
+        <table class="table is-fullwidth">
+          <thead>
+            <tr>
+              <th>One</th>
+              <th>Two</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Three</td>
+              <td>Four</td>
+            </tr>
+            <tr>
+              <td>Five</td>
+              <td>Six</td>
+            </tr>
+            <tr>
+              <td>Seven</td>
+              <td>Eight</td>
+            </tr>
+            <tr>
+              <td>Nine</td>
+              <td>Ten</td>
+            </tr>
+            <tr>
+              <td>Eleven</td>
+              <td>Twelve</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <p>You can <strong>combine</strong> all four modifiers.</p>
+      </div>
+      <div class="column">
+        <code>table is-bordered is-striped is-narrow is-fullwidth</code>
+      </div>
+      <div class="column is-half">
+        <table class="table is-bordered is-striped is-narrow is-fullwidth">
+          <thead>
+            <tr>
+              <th>One</th>
+              <th>Two</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Three</td>
+              <td>Four</td>
+            </tr>
+            <tr>
+              <td>Five</td>
+              <td>Six</td>
+            </tr>
+            <tr>
+              <td>Seven</td>
+              <td>Eight</td>
+            </tr>
+            <tr>
+              <td>Nine</td>
+              <td>Ten</td>
+            </tr>
+            <tr>
+              <td>Eleven</td>
+              <td>Twelve</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="variables" class="title anchor-title">
+  Variables
+  <a class="anchor-link" href="#variables">
+    #
+  </a>
+</h3>
+
+
+<div class="content">
+  <p>
+    You can use these variables to <strong>customize</strong> this element. Simply set one or multiple of these variables <em>before</em> importing Bulma. <a href="http://bulma.io/documentation/overview/customize/">Learn how</a>.
+  </p>
+</div>
+
+<table class="table is-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Default value</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Default value</th>
+    </tr>
+  </tfoot>
+  <tbody>
+
+      <tr>
+        <td>
+          <code>$table-color</code>
+        </td>
+        <td>
+          <code>$grey-darker</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-background-color</code>
+        </td>
+        <td>
+          <code>$white</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-cell-border</code>
+        </td>
+        <td>
+          <code>1px solid $grey-lighter</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-cell-border-width</code>
+        </td>
+        <td>
+          <code>0 0 1px</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-cell-padding</code>
+        </td>
+        <td>
+          <code>0.5em 0.75em</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-cell-heading-color</code>
+        </td>
+        <td>
+          <code>$text-strong</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-head-color</code>
+        </td>
+        <td>
+          <code>$grey</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-head-cell-border-width</code>
+        </td>
+        <td>
+          <code>0 0 2px</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-head-cell-color</code>
+        </td>
+        <td>
+          <code>$text-strong</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-foot-cell-border-width</code>
+        </td>
+        <td>
+          <code>2px 0 0</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-foot-cell-color</code>
+        </td>
+        <td>
+          <code>$text-strong</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-row-hover-background-color</code>
+        </td>
+        <td>
+          <code>$white-bis</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-row-active-background-color</code>
+        </td>
+        <td>
+          <code>$primary</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-row-active-color</code>
+        </td>
+        <td>
+          <code>$primary-invert</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-striped-row-even-background-color</code>
+        </td>
+        <td>
+          <code>$white-bis</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$table-striped-row-even-hover-background-color</code>
+        </td>
+        <td>
+          <code>$white-ter</code>
+        </td>
+      </tr>
+
+  </tbody>
+</table>
+
+
+  </div>
+</section>

@@ -1,0 +1,461 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">Modal</h1>
+    <h2 class="subtitle">A classic <strong>modal</strong> overlay, in which you can include <em>any</em> content you want</h2>
+    <div id="meta" class="field is-grouped is-grouped-multiline">
+
+
+
+
+
+
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Colors</span>
+
+        <span class="tag is-danger">No</span>
+
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Sizes</span>
+
+        <span class="tag is-danger">No</span>
+
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Variables</span>
+
+        <a class="tag is-success" href="#variables">Yes</a>
+
+    </div>
+  </div>
+</div>
+
+
+    <hr>
+
+    <div class="content">
+      <p>The modal structure is very simple:</p>
+      <ul>
+        <li>
+          <code>modal</code>: the main container
+          <ul>
+            <li>
+              <code>modal-background</code>: a transparent overlay that can act as a click target to close the modal
+            </li>
+            <li>
+              <code>modal-content</code>: a horizontally and verticaly centered container, with a maximum width of 640px, in which you can include <em>any</em> content
+            </li>
+            <li>
+              <code>modal-close</code>: a simple cross located in the top right corner
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        <a class="button is-primary is-large modal-button" data-target="modal">Launch example modal</a>
+      </p>
+    </div>
+
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-background"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Any other Bulma elements you want --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"modal-close is-large"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+    <div class="content">
+      <p>To <strong>activate</strong> the modal, just add the <code>is-active</code> modifier on the <code>.modal</code> container</p>
+    </div>
+
+    <div class="message is-danger">
+      <div class="message-header">
+        No JavaScript
+      </div>
+      <div class="message-body">
+        Bulma does <strong>not</strong> include any JavaScript interaction. You will have to implement the class toggle yourself.
+      </div>
+    </div>
+
+    <hr>
+
+    <h3 class="title">Image modal</h3>
+
+    <div class="content">
+      <p>Because a modal can contain <strong>anything you want</strong>, you can very simply use it to build an image gallery for example:</p>
+      <p>
+        <a class="button is-primary is-large modal-button" data-target="modal-bis">Launch image modal</a>
+      </p>
+    </div>
+
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-background"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"image is-4by3"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://bulma.io/images/placeholders/1280x960.png"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"modal-close is-large"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+    <hr>
+
+    <h3 class="title">Modal card</h3>
+
+    <div class="content">
+      <p>If you want a more classic modal, with a <strong>head</strong>, a <strong>body</strong> and a <strong>foot</strong>, use the <code>modal-card</code>.</p>
+      <p>
+        <a class="button is-primary is-large modal-button" data-target="modal-ter">Launch modal card</a>
+      </p>
+    </div>
+
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-background"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-card"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"modal-card-head"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"modal-card-title"</span><span class="nt">&gt;</span>Modal title<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"delete"</span><span class="nt">&gt;&lt;/button&gt;</span>
+    <span class="nt">&lt;/header&gt;</span>
+    <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"modal-card-body"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!-- Content ... --&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+    <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"modal-card-foot"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button is-success"</span><span class="nt">&gt;</span>Save changes<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/footer&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="variables" class="title anchor-title">
+  Variables
+  <a class="anchor-link" href="#variables">
+    #
+  </a>
+</h3>
+
+
+<div class="content">
+  <p>
+    You can use these variables to <strong>customize</strong> this component. Simply set one or multiple of these variables <em>before</em> importing Bulma. <a href="http://bulma.io/documentation/overview/customize/">Learn how</a>.
+  </p>
+</div>
+
+<table class="table is-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Default value</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Default value</th>
+    </tr>
+  </tfoot>
+  <tbody>
+
+      <tr>
+        <td>
+          <code>$modal-z</code>
+        </td>
+        <td>
+          <code>20</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-background-background-color</code>
+        </td>
+        <td>
+          <code>rgba($black, 0.86)</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-content-width</code>
+        </td>
+        <td>
+          <code>640px</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-content-margin-mobile</code>
+        </td>
+        <td>
+          <code>20px</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-content-spacing-mobile</code>
+        </td>
+        <td>
+          <code>160px</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-content-spacing-tablet</code>
+        </td>
+        <td>
+          <code>40px</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-close-dimensions</code>
+        </td>
+        <td>
+          <code>40px</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-close-right</code>
+        </td>
+        <td>
+          <code>20px</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-close-top</code>
+        </td>
+        <td>
+          <code>20px</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-card-spacing</code>
+        </td>
+        <td>
+          <code>40px</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-card-head-background-color</code>
+        </td>
+        <td>
+          <code>$background</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-card-head-border-bottom</code>
+        </td>
+        <td>
+          <code>1px solid $border</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-card-head-padding</code>
+        </td>
+        <td>
+          <code>20px</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-card-head-radius</code>
+        </td>
+        <td>
+          <code>$radius-large</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-card-title-color</code>
+        </td>
+        <td>
+          <code>$text-strong</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-card-title-line-height</code>
+        </td>
+        <td>
+          <code>1</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-card-title-size</code>
+        </td>
+        <td>
+          <code>$size-4</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-card-foot-radius</code>
+        </td>
+        <td>
+          <code>$radius-large</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-card-foot-border-top</code>
+        </td>
+        <td>
+          <code>1px solid $border</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-card-body-background-color</code>
+        </td>
+        <td>
+          <code>$white</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$modal-card-body-padding</code>
+        </td>
+        <td>
+          <code>20px</code>
+        </td>
+      </tr>
+
+  </tbody>
+</table>
+
+
+  </div>
+</section>
+
+
+<div id="modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-64x64">
+            <img src="http://bulma.io/images/placeholders/128x128.png" alt="Image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+              <br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+            </p>
+          </div>
+          <nav class="level">
+            <div class="level-left">
+              <a class="level-item">
+                <span class="icon is-small"><i class="fa fa-reply"></i></span>
+              </a>
+              <a class="level-item">
+                <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+              </a>
+              <a class="level-item">
+                <span class="icon is-small"><i class="fa fa-heart"></i></span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </article>
+    </div>
+  </div>
+  <button class="modal-close is-large"></button>
+</div>
+<div id="modal-bis" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <p class="image is-4by3">
+      <img src="http://bulma.io/images/placeholders/1280x960.png">
+    </p>
+  </div>
+  <button class="modal-close is-large"></button>
+</div>
+<div id="modal-ter" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+      <button class="delete"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="content">
+        <h1>Hello World</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.</p>
+        <h2>Second level</h2>
+        <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
+        <ul>
+          <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
+          <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
+          <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
+          <li>Ut non enim metus.</li>
+        </ul>
+        <h3>Third level</h3>
+        <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="#">non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
+        <ol>
+          <li>Donec blandit a lorem id convallis.</li>
+          <li>Cras gravida arcu at diam gravida gravida.</li>
+          <li>Integer in volutpat libero.</li>
+          <li>Donec a diam tellus.</li>
+          <li>Aenean nec tortor orci.</li>
+          <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
+          <li>Vivamus maximus ultricies pulvinar.</li>
+        </ol>
+        <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
+        <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
+        <p>Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum commodo.</p>
+        <p>Suspendisse egestas sapien non felis placerat elementum. Morbi tortor nisl, suscipit sed mi sit amet, mollis malesuada nulla. Nulla facilisi. Nullam ac erat ante.</p>
+        <h4>Fourth level</h4>
+        <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus laoreet, at elementum ex efficitur.</p>
+        <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
+        <p>Phasellus porttitor enim id metus volutpat ultricies. Ut nisi nunc, blandit sed dapibus at, vestibulum in felis. Etiam iaculis lorem ac nibh bibendum rhoncus. Nam interdum efficitur ligula sit amet ullamcorper. Etiam tristique, leo vitae porta faucibus, mi lacus laoreet metus, at cursus leo est vel tellus. Sed ac posuere est. Nunc ultricies nunc neque, vitae ultricies ex sodales quis. Aliquam eu nibh in libero accumsan pulvinar. Nullam nec nisl placerat, pretium metus vel, euismod ipsum. Proin tempor cursus nisl vel condimentum. Nam pharetra varius metus non pellentesque.</p>
+        <h5>Fifth level</h5>
+        <p>Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed tincidunt ligula. Vestibulum at nunc elit. Praesent aliquet ligula mi, in luctus elit volutpat porta. Phasellus molestie diam vel nisi sodales, a eleifend augue laoreet. Sed nec eleifend justo. Nam et sollicitudin odio.</p>
+        <h6>Sixth level</h6>
+        <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
+
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <a class="button is-success">Save changes</a>
+      <a class="button">Cancel</a>
+    </footer>
+  </div>
+</div>

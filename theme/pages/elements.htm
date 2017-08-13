@@ -1,0 +1,33 @@
+;;
+url = '/elements/:element_name?'
+layout = default
+title = 'Styles & Elements examples'
+description = "Styles & Elements from Bulma CSS"
+==
+function onStart()
+{
+    $this['show_element'] = $this->param('element_name') ?? 'grid';
+    $this->page['title'] = ucfirst($this->param('element_name')) ?? 'The Grid';
+}
+==
+<!-- Header -->
+<section class="hero is-medium is-primary is-bold">
+{% partial 'site/header' %}
+<div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {{ this.page.title }}
+      </h1>
+      <h2 class="subtitle">
+        {{ this.page.description }}
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- Body -->
+
+{% content 'demo/bulma/' ~ show_element  ~ '.htm' %}
+
+{% partial 'parts/callout_newsletter' %}
+<!-- Footer -->
+{% partial 'site/footer' %}

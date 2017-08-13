@@ -1,0 +1,81 @@
+url = '/page'
+layout = default
+title = 'Page template'
+description = "Single page template"
+==
+function onStart()
+{
+    $this['show_element'] = 'notifications';
+}
+==
+{##}
+<!-- Header -->
+<section class="hero is-medium is-primary is-bold">
+  {% partial 'site/header' %}
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {{ this.page.title }}
+      </h1>
+      <h2 class="subtitle">
+        {{ this.page.description }}
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- Body -->
+<section class="section is-big">
+  <div class="container">
+    <h3 class="title is-3">This is a title of the content</h3>
+    <p class="subtitle">This is a  subtitle</p>
+    <hr>
+    <div class="content">
+      <p>To build a <strong>grid</strong>, just:</p>
+      <ol>
+        <li>Add a <code>columns</code> container</li>
+        <li>Add as many <code>column</code> elements as you want</li>
+      </ol>
+      <p>Each column will have an <strong>equal width</strong>, no matter the number of columns.</p>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <p class="notification is-info">First column</p>
+      </div>
+      <div class="column">
+        <p class="notification is-success">Second column</p>
+      </div>
+      <div class="column">
+        <p class="notification is-warning">Third column</p>
+      </div>
+      <div class="column is-danger">
+        <p class="notification is-danger">Fourth column</p>
+      </div>
+    </div>
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"columns"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column"</span><span class="nt">&gt;</span>
+    First column
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column"</span><span class="nt">&gt;</span>
+    Second column
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column"</span><span class="nt">&gt;</span>
+    Third column
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column"</span><span class="nt">&gt;</span>
+    Fourth column
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+</figure>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <p class="has-text-grey-light">
+      This page is <strong class="has-text-grey">and example</strong>.
+      Its part of the <a class="has-text-grey" href="#" style="border-bottom: 1px solid currentColor;">OctoberCRM</a> beautifull ecosystem of themes
+    </p>
+  </div>
+</section>
+{% partial 'parts/callout_newsletter' %}
+<!-- Footer -->
+{% partial 'site/footer' %}

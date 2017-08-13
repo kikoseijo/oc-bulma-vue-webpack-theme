@@ -1,0 +1,112 @@
+description = "Header Navigation partial"
+==
+{##}
+<nav class="navbar is-transparent">
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="{{ 'assets/images/bulma-white.png'|theme }}" alt="{{ this.theme.site_name }}">
+    </a>
+    <a class="navbar-item is-hidden-desktop" href="https://github.com/" target="_blank">
+      <span class="icon" style="color: #333;">
+        <i class="fa fa-github"></i>
+      </span>
+    </a>
+    <a class="navbar-item is-hidden-desktop" href="https://twitter.com/" target="_blank">
+      <span class="icon" style="color: #55acee;">
+        <i class="fa fa-twitter"></i>
+      </span>
+    </a>
+    <div class="navbar-burger burger" data-target="topMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="topMenu" class="navbar-menu">
+    <div class="navbar-end">
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Elements
+        </a>
+        <div class="navbar-dropdown is-boxed">
+          {% for element in this.theme.config.elements %}
+          <a href="/elements/{{element}}" class="navbar-item{% if show_element == element %} is-active{% endif %}">{{str_studly(element)}}</a>
+          {% endfor %}
+          <hr class="navbar-divider">
+          <div class="navbar-item">
+            More elements in &nbsp;<span class="tag is-primary"><a href="http://bulma.io" class="is-bold" target="_blank">Bulma.io</a></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Vue Components
+        </a>
+        <div class="navbar-dropdown is-boxed">
+          {% for component in this.theme.config.buefyEl %}
+            <a href="/components/{{component}}" class="navbar-item{% if show_element == component %} is-active{% endif %}">{{str_studly(component)}}</a>
+          {% endfor %}
+          <hr class="navbar-divider">
+          <div class="navbar-item">
+            More components in &nbsp;<span class="tag is-primary"><a href="https://buefy.github.io" class="is-bold" target="_blank">Buefy</a></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link " href="http://bulma.io/blog/">
+          Examples
+        </a>
+        <div class="navbar-dropdown is-boxed">
+          {% for component in this.theme.config.pagesExamples %}
+            <a href="/page-examples/{{component}}" class="navbar-item{% if show_element == component %} is-active{% endif %}">{{str_studly(component)}}</a>
+          {% endfor %}
+        </div>
+     </div>
+     <div class="navbar-item has-dropdown is-hoverable">
+       <div class="navbar-link">
+         More
+       </div>
+       <div id="moreDropdown" class="navbar-dropdown is-boxed">
+         <a class="navbar-item " href="http://bulma.io/extensions/">
+           <div class="level is-mobile">
+             <div class="level-left">
+               <div class="level-item">
+                 <p>
+                   <strong>Extensions</strong>
+                   <br>
+                   <small>Side projects to enhance Bulma</small>
+                 </p>
+               </div>
+             </div>
+             <div class="level-right">
+               <div class="level-item">
+                 <span class="icon has-text-info">
+                   <i class="fa fa-plug"></i>
+                 </span>
+               </div>
+             </div>
+           </div>
+         </a>
+       </div>
+     </div>
+     <a class="navbar-item " href="http://bulma.io/love/">
+       <span class="emoji">❤️</span>
+       Love
+     </a>
+        <span class="navbar-item">
+          <a class="button is-default">
+            <span class="icon">
+                  <i class="fa fa-download"></i>
+            </span>
+            <span>Free Download</span>
+          </a>
+        </span>
+      </div>
+  </div>
+
+</nav>

@@ -1,0 +1,32 @@
+url = '/components/:element_name?'
+layout = default
+title = 'Buefy (VueJs) examples'
+description = "VueJs components ready to use"
+==
+function onStart()
+{
+    $this['show_element'] = $this->param('element_name') ?? 'notifications';
+    $this->page['title'] = ucfirst($this->param('element_name')) ?? 'Notifications';
+}
+==
+<!-- Header -->
+<section class="hero is-medium is-primary is-bold">
+  {% partial 'site/header' %}
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {{ this.page.title }}
+      </h1>
+      <h2 class="subtitle">
+        {{ this.page.description }}
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- Body -->
+<section class="section">
+  <ks-{{show_element}}></ks-{{show_element}}>
+</section>
+{% partial 'parts/callout_newsletter' %}
+<!-- Footer -->
+{% partial 'site/footer' %}

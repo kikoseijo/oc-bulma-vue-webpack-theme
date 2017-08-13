@@ -1,0 +1,20 @@
+url = '/'
+layout = default
+title = 'Landing page (Home)'
+description = "This is the website landing page"
+==
+function onStart()
+{
+    // $this['close_header'] = false;
+}
+==
+<!-- Header -->
+<section class="hero is-fullheight is-primary is-bold">
+{% partial 'site/header' %}
+{% partial 'pages/home-head' %}
+</section>
+<!-- Body -->
+{% partial 'pages/home-body' %}
+<!-- Footer -->
+{% partial 'parts/callout_newsletter' %}
+{% partial 'site/footer' %}

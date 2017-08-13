@@ -1,0 +1,32 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ this.page.title | default(this.theme.config.name) }} | {{ this.theme.site_slogan | default(this.theme.config.description) }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Kiko Seijo">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="Webpack+Bulma+Vue+Font-Awesome">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/icon.png'|theme }}">
+        <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+        <link href="{{ [
+            'assets/less/app.less',
+            'assets/less/demo.less'
+        ]|theme }}" rel="stylesheet">
+        {% styles %}
+        {% placeholder head %}
+    </head>
+    <body class="page-{{ this.page.id }}">
+      <div class="oc-bulma-app">
+        {% page %}
+      </div>
+      <!-- Scripts -->
+      <script src="{{ 'assets/scripts/main.js'|theme }}"></script>
+      {% framework extras %}
+      {% scripts %}
+    </body>
+</html>

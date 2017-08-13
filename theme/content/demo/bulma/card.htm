@@ -1,0 +1,362 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">Card</h1>
+    <h2 class="subtitle">An all-around flexible and composable component</h2>
+    <div id="meta" class="field is-grouped is-grouped-multiline">
+
+
+
+
+
+
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Colors</span>
+
+        <span class="tag is-danger">No</span>
+
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Sizes</span>
+
+        <span class="tag is-danger">No</span>
+
+    </div>
+  </div>
+
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag">Variables</span>
+
+        <a class="tag is-success" href="#variables">Yes</a>
+
+    </div>
+  </div>
+</div>
+
+
+    <hr>
+
+    <div class="content">
+      <p>The <strong>card</strong> component comprises several elements that you can mix and match:</p>
+      <ul>
+        <li>
+          <code>card</code>: the main container
+          <ul>
+            <li>
+              <code>card-header</code>: a horizontal bar with a shadow
+              <ul>
+                <li>
+                  <code>card-header-title</code>: a left-aligned bold text
+                </li>
+                <li>
+                  <code>card-header-icon</code>: a placeholder for an icon
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code>card-image</code>: a fullwidth container for a reponsive image
+            </li>
+            <li>
+              <code>card-content</code>: a multi-purpose container for <em>any</em> other element
+            </li>
+            <li>
+              <code>card-footer</code>: a horizontal list of controls
+              <ul>
+                <li>
+                  <code>card-footer-item</code>: a repeatable list item
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="columns">
+      <div class="column is-one-third">
+
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Image">
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-48x48">
+          <img src="http://bulma.io/images/placeholders/96x96.png" alt="Image">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-4">John Smith</p>
+        <p class="subtitle is-6">@johnsmith</p>
+      </div>
+    </div>
+
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+      <a>#css</a> <a>#responsive</a>
+      <br>
+      <small>11:09 PM - 1 Jan 2016</small>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <div class="column highlight-full">
+        <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-image"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"image is-4by3"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://bulma.io/images/placeholders/1280x960.png"</span> <span class="na">alt=</span><span class="s">"Image"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/figure&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-left"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"image is-48x48"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://bulma.io/images/placeholders/96x96.png"</span> <span class="na">alt=</span><span class="s">"Image"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/figure&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"title is-4"</span><span class="nt">&gt;</span>John Smith<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"subtitle is-6"</span><span class="nt">&gt;</span>@johnsmith<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus nec iaculis mauris. <span class="nt">&lt;a&gt;</span>@bulmaio<span class="nt">&lt;/a&gt;</span>.
+      <span class="nt">&lt;a&gt;</span>#css<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;a&gt;</span>#responsive<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;small&gt;</span>11:09 PM - 1 Jan 2016<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="columns">
+      <div class="column is-one-third">
+
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      Component
+    </p>
+    <a class="card-header-icon">
+      <span class="icon">
+        <i class="fa fa-angle-down"></i>
+      </span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+      <a>@bulmaio</a>. <a>#css</a> <a>#responsive</a>
+      <br>
+      <small>11:09 PM - 1 Jan 2016</small>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <a class="card-footer-item">Save</a>
+    <a class="card-footer-item">Edit</a>
+    <a class="card-footer-item">Delete</a>
+  </footer>
+</div>
+
+      </div>
+      <div class="column highlight-full">
+        <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"card-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-header-title"</span><span class="nt">&gt;</span>
+      Component
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"card-header-icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-angle-down"</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+      <span class="nt">&lt;a&gt;</span>@bulmaio<span class="nt">&lt;/a&gt;</span>. <span class="nt">&lt;a&gt;</span>#css<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;a&gt;</span>#responsive<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;small&gt;</span>11:09 PM - 1 Jan 2016<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"card-footer-item"</span><span class="nt">&gt;</span>Save<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"card-footer-item"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"card-footer-item"</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="columns">
+      <div class="column is-one-third">
+
+<div class="card">
+  <div class="card-content">
+    <p class="title">
+      “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
+    </p>
+    <p class="subtitle">
+      Jeff Atwood
+    </p>
+  </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+      <span>
+        View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+      </span>
+    </p>
+    <p class="card-footer-item">
+      <span>
+        Share on <a href="#">Facebook</a>
+      </span>
+    </p>
+  </footer>
+</div>
+
+      </div>
+      <div class="column highlight-full">
+        <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>
+      “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"subtitle"</span><span class="nt">&gt;</span>
+      Jeff Atwood
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-footer-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span&gt;</span>
+        View on <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/codinghorror/status/506010907021828096"</span><span class="nt">&gt;</span>Twitter<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-footer-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span&gt;</span>
+        Share on <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Facebook<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+      </div>
+    </div>
+
+    <hr style="margin-bottom: 0;">
+
+<h3 id="variables" class="title anchor-title">
+  Variables
+  <a class="anchor-link" href="#variables">
+    #
+  </a>
+</h3>
+
+
+<div class="content">
+  <p>
+    You can use these variables to <strong>customize</strong> this component. Simply set one or multiple of these variables <em>before</em> importing Bulma. <a href="http://bulma.io/documentation/overview/customize/">Learn how</a>.
+  </p>
+</div>
+
+<table class="table is-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Default value</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Default value</th>
+    </tr>
+  </tfoot>
+  <tbody>
+
+      <tr>
+        <td>
+          <code>$card-color</code>
+        </td>
+        <td>
+          <code>$text</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$card-background-color</code>
+        </td>
+        <td>
+          <code>$white</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$card-shadow</code>
+        </td>
+        <td>
+          <code>0 2px 3px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1)</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$card-header-color</code>
+        </td>
+        <td>
+          <code>$text-strong</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$card-header-shadow</code>
+        </td>
+        <td>
+          <code>0 1px 2px rgba($black, 0.1)</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$card-header-weight</code>
+        </td>
+        <td>
+          <code>$weight-bold</code>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <code>$card-footer-border-top</code>
+        </td>
+        <td>
+          <code>1px solid $border</code>
+        </td>
+      </tr>
+
+  </tbody>
+</table>
+
+
+  </div>
+</section>
