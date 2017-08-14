@@ -10,9 +10,17 @@ module.exports = {
   entry: {
     main: [
       './src/scripts/main.js',
-      './src/styles/media.sass',
-      './src/styles/vendor.sass'
-    ]
+    ],
+    brown: './src/styles/colors/brown.sass',
+    cream: './src/styles/colors/cream.sass',
+    grey: './src/styles/colors/grey.sass',
+    navy: './src/styles/colors/navy.sass',
+    orange: './src/styles/colors/orange.sass',
+    pink: './src/styles/colors/pink.sass',
+    purple: './src/styles/colors/purple.sass',
+    teal: './src/styles/colors/teal.sass',
+    wine: './src/styles/colors/wine.sass',
+    yellow: './src/styles/colors/yellow.sass',
   },
   output: {
     path: path.resolve(__dirname, './theme/assets/scripts'),
@@ -112,11 +120,11 @@ module.exports = {
 
 if (inProduction) {
   module.exports.plugins.push(
-    new ExtractTextPlugin('./../css/theme.min.css'),
+    new ExtractTextPlugin('./../css/colors/[name].min.css'),
     new webpack.optimize.UglifyJsPlugin()
   );
 } else {
   module.exports.plugins.push(
-    new ExtractTextPlugin('./../css/theme.css')
+    new ExtractTextPlugin('./../css/colors/[name].css')
   );
 }

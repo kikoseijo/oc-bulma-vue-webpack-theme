@@ -1,32 +1,103 @@
 description = "Default layout"
+
+
+==
+use System\Classes\CombineAssets;
+use CMS\Models\ThemeData;
+use CMS\Controllers\Themes;
+
+function onStart()
+{
+    $this['color_values'] = $colors = [
+        '#49412c' => 'brown', '#c7ad88' => 'cream', '#677077' => 'grey',
+        '#16174f' => 'navy', '#f0810f' => 'orange', '#ffb3b3' => 'pink',
+        '#300032' => 'purple', '#6ed3cf' => 'teal', '#5e0231' => 'wine',
+        '#fdc500' => 'yellow'
+    ];
+
+    if (Input::has("color") && in_array(Input::get("color"), $colors)) {
+
+        $this['css_file_values'] = Input::get("color");
+        $dirName = $this->theme->getDirName();
+        $settings = ThemeData::where('theme',$dirName)->first();
+        $newSettings = $settings->data;
+        $newSettings['primary_color'] = array_search(Input::get("color"), $colors); //1F3F50
+        ThemeData::where('theme',$dirName)->update(['data' => json_encode($newSettings)]);
+
+    } else {
+        $this['css_file_values'] =  $colors[$this->theme->primary_color];
+    }
+}
 ==
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>{{ this.page.title | default(this.theme.config.name) }} | {{ this.theme.site_slogan | default(this.theme.config.description) }}</title>
-        <meta name="description" content="{{ this.page.meta_description }}">
+        <title>{{ this.theme.site_name }} - {{ this.page.meta_title | default(this.page.title) }} | {{ this.theme.site_slogan | default(this.theme.config.description) }}</title>
         <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="author" content="Kiko Seijo">
+        <meta name="description" content="{{ this.page.meta_description|default(this.theme.description) }}">
+        <meta name="keywords" content="{{ this.theme.keywords }}">
+        <meta name="author" content="{{ this.theme.site_author }}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="Webpack+Bulma+Vue+Font-Awesome">
+        <link rel="canonical" href="{{ this.theme.site_url }}" />
         <link rel="icon" type="image/png" href="{{ 'assets/images/icon.png'|theme }}">
         <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+
+        {% set curCssFile = 'assets/css/colors/' ~ css_file_values ~ '.css' %}
+        <link href="{{ curCssFile|theme }}" rel="stylesheet">
+
         <link href="{{ [
             'assets/less/app.less',
             'assets/less/demo.less'
         ]|theme }}" rel="stylesheet">
+
+        {% if this.theme.load_material_icons %}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        {% endif %}
+
+        {% if this.theme.load_animate_css %}
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+        {% endif %}
+
         {% styles %}
+
+        {% if this.theme.custom_css %}
+        <style>
+        {{ this.theme.custom_css }}
+        </style>
+        {% endif %}
+
         {% placeholder head %}
     </head>
-    <body class="page-{{ this.page.id }}">
-      <div class="oc-bulma-app">
-        {% page %}
-      </div>
-      <!-- Scripts -->
-      <script src="{{ 'assets/scripts/main.js'|theme }}"></script>
-      {% framework extras %}
-      {% scripts %}
+    <body class="page-{{ this.page.id }} oc-layout-{{ this.layout.id }} oc-page-{{ this.page.id }}">
+
+        <div class="oc-bulma-app">
+            {% page %}
+        </div>
+
+
+
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/scripts/main.js'|theme }}"></script>
+
+        {% if this.theme.load_wow_js %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/graingert-wow/1.2.0/wow.min.js"></script>
+        <script> new WOW().init(); </script>
+        {% endif %}
+
+        {% if this.theme.load_octobercms_framework %}
+            {% framework extras %}
+        {% endif %}
+
+        {% scripts %}
+
+        {% if this.theme.custom_js %}
+            <script type="text/javascript">
+                {{ this.theme.custom_js }}
+            </script>
+        {% endif %}
+
     </body>
 </html>

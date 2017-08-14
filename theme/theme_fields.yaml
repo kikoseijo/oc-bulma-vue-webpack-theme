@@ -1,0 +1,143 @@
+tabs:
+  fields:
+
+    ####################################################
+    # Tab: Info
+    ####################################################
+
+    site_name:
+      tab: Info
+      label: Website Name
+      type: text
+      default: Bulma theme for OctoberCMS
+      span: auto
+
+    site_slogan:
+      tab: Info
+      label: Site slogan
+      default: Another amazing OctoberCMS Theme!
+      span: auto
+
+    site_author:
+      tab: Info
+      label: Author
+      type: text
+      default: Sunnyface.com
+      span: auto
+
+    site_url:
+      tab: Info
+      label: URL
+      type: text
+      default: "http://october.sunnyface.com/?demos=true&theme=bulma&color=purple"
+      span: auto
+
+    description:
+      tab: Info
+      label: Description
+      type: textarea
+      default: "OctoberCMS theme for developpers."
+
+    keywords:
+      tab: Info
+      label: Keywords
+      type: taglist
+      separator: comma
+      default: bulma,octobercms,vuejs,buefy
+
+    ####################################################
+    # Tab: Styles & Assets
+    ####################################################
+
+    primary_color:
+      tab: Styles & Assets
+      label: Primary color
+      type: dropdown
+      assetVar: 'primary-color'
+      span: auto
+      default: '#300032'
+      options:
+        '#49412c': Brown
+        '#c7ad88': Cream
+        '#677077': Grey
+        '#16174f': Navy
+        '#f0810f': Orange
+        '#ffb3b3': Pink
+        '#300032': Purple
+        '#6ed3cf': Teal
+        '#5e0231': Wine
+        '#fdc500': Yellow
+
+    load_octobercms_framework:
+      tab: Styles & Assets
+      label: Load OctoberCMS Front-end Javascript Framework
+      type: switch
+      default: false
+
+    load_material_icons:
+      tab: Styles & Assets
+      label: Material Icons Font
+      type: switch
+      default: false
+
+    load_animate_css:
+      tab: Styles & Assets
+      label: Animate CSS
+      type: switch
+      default: true
+
+    load_wow_js:
+      tab: Styles & Assets
+      label: WOW JS
+      type: switch
+      default: false
+
+    ####################################################
+    # Tab: Custom CSS & Js
+    ####################################################
+
+    custom_css:
+      tab: Custom CSS & Js
+      label: Custom CSS
+      type: codeeditor
+      size: huge
+      language: css
+
+    custom_js:
+      tab: Custom CSS & Js
+      label: Custom JS
+      type: codeeditor
+      size: huge
+      language: javascript
+
+    ####################################################
+    # Tab: Social media
+    ####################################################
+    social_icon_size:
+        tab: Social media
+        label: Choose the size of the icons to display in the theme footer.
+        type: balloon-selector
+        default: is-normale
+        options:
+            is-hidden: Disabled
+            is-normale: Normal (1.5rem)
+            is-medium: Medium (2rem)
+            is-large: Large (3rem)
+
+    social_media:
+        tab: Social media
+        type: repeater
+        prompt: Add new social media
+        maxItems: 6
+        comment: Will be available site wide using the <strong>this.theme.social_media</strong> call
+        commentHtml: true
+        form:
+            fields:
+                icon:
+                    label: Icon class name ej. fa fa-facebook
+                    placeholder: fa fa-facebook
+                    span: auto
+                url:
+                    label: Social media url (Must be a full url with http:// or https://)
+                    placeholder: https://github.com/kikoseijo/oc-bulma-theme
+                    span: auto
