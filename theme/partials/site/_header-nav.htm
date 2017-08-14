@@ -1,6 +1,5 @@
 description = "Header Navigation partial"
 ==
-{##}
 <nav class="navbar is-transparent">
 
   <div class="navbar-brand">
@@ -58,9 +57,9 @@ description = "Header Navigation partial"
       </div>
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link " href="http://bulma.io/blog/">
+        <div class="navbar-link">
           Examples
-        </a>
+        </div>
         <div class="navbar-dropdown is-boxed">
           {% for component in this.theme.config.pagesExamples %}
             <a href="/page-examples/{{component}}" class="navbar-item{% if show_element == component %} is-active{% endif %}">{{str_studly(component)}}</a>
@@ -69,35 +68,15 @@ description = "Header Navigation partial"
      </div>
      <div class="navbar-item has-dropdown is-hoverable">
        <div class="navbar-link">
-         More
+         Colors
        </div>
-       <div id="moreDropdown" class="navbar-dropdown is-boxed">
-         <a class="navbar-item " href="http://bulma.io/extensions/">
-           <div class="level is-mobile">
-             <div class="level-left">
-               <div class="level-item">
-                 <p>
-                   <strong>Extensions</strong>
-                   <br>
-                   <small>Side projects to enhance Bulma</small>
-                 </p>
-               </div>
-             </div>
-             <div class="level-right">
-               <div class="level-item">
-                 <span class="icon has-text-info">
-                   <i class="fa fa-plug"></i>
-                 </span>
-               </div>
-             </div>
-           </div>
-         </a>
+       <div class="navbar-dropdown is-boxed">
+         {% for component in color_values %}
+           <a href="?color={{component}}" class="navbar-item{% if css_file_values == component %} is-active{% endif %}">{{str_studly(component)}}</a>
+         {% endfor %}
        </div>
      </div>
-     <a class="navbar-item " href="http://bulma.io/love/">
-       <span class="emoji">❤️</span>
-       Love
-     </a>
+
         <span class="navbar-item">
           <a class="button is-default">
             <span class="icon">

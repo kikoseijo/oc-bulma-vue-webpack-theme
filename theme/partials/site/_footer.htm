@@ -1,0 +1,48 @@
+description = "Footer partial"
+==
+function onStart()
+{
+    $this['bye'] = "Closing footer";
+}
+==
+<footer>
+  <div class="section is-medium footer-menu">
+    <div class="container is-primary">
+
+      {% partial 'site/_footer-nav' %}
+
+    </div>
+  </div>
+
+  <div class="section footer-credits">
+    <div class="container is-primary">
+      <div class="content has-text-centered is-primary">
+        <p>
+          <a href="{{ this.theme.site_url }}">© {{ this.theme.site_name | default(this.theme.config.name) }}</a>
+          a theme by <a href="http://sunnyface.com">{{ this.theme.site_author | default(this.theme.config.author) }}</a>.
+          Powered with <a href="https://laravel.com">Laravel</a> and <a href="https://octobercms.com">OctoberCMS</a>.
+        </p>
+        {% if this.theme.social_icon_size != 'is-hidden' %}
+        <div class="social-media-icons">
+            {% if this.theme.social_media %}
+                <div class="columns is-mobile is-centered">
+                    <div class="column is-narrow">
+                        {% for social in this.theme.social_media %}
+                        <a class="icon hvr-grow {{ this.theme.social_icon_size }}" href="{{social.url}}" target="_blank"><i class="{{social.icon}}"></i></a>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% else %}
+                <a class="icon hvr-grow {{ this.theme.social_icon_size }}" href="https://github.com/kikoseijo/oc-bulma-theme" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        <p>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

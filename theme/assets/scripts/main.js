@@ -473,9 +473,7 @@ module.exports = __webpack_require__.p + "./../images/buefy.png";
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(5);
-__webpack_require__(56);
-module.exports = __webpack_require__(57);
+module.exports = __webpack_require__(5);
 
 
 /***/ }),
@@ -28495,18 +28493,6 @@ function closest (element, selector) {
 
 module.exports = closest;
 
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 57 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

@@ -1,46 +1,25 @@
 name: 'Bulma Boilerplate Theme'
 description: 'An OctoberCMS Theme for developpers, uses Bulma for CSS - Vue for Javascript - Webpack to build styles, optimize images, compile javascript and VueJs.'
 author: 'Kiko Seijo'
+code: 'ksoft-bulma'
 homepage: 'http://sunnyface.com'
+colours:
+  brown: '#49412c'
+  cream: '#c7ad88'
+  grey: '#677077'
+  navy: '#16174f'
+  orange: '#e05038'
+  pink: '#ffb3b3'
+  purple: '#300032'
+  teal: '#6ed3cf'
+  wine: '#5e0231'
+  yellow: '#cdd422'
+
 elements: ['responsive', 'hero', 'grid','box','buttons','tiles','timeline', 'card', 'typography', 'message', 'notification', 'table', 'form']
 buefyEl: ['fields', 'notifications', 'tabs', 'icon', 'menu', 'modal', 'pagination']
-pagesExamples: ['product-detail', 'register', 'blog']
+pagesExamples: ['product-detail', 'register', 'blog', 'blog-2']
 #require:
 #    - Acme.User
 #    - Acme.Blog
 
-# form: config/fields.yaml
-form:
-    fields:
-        site_name:
-            label: Site name
-            comment: The website name as it should appear on the front-end
-            default: Bulma Boilerplate Theme
-        site_slogan:
-            label: Site slogan
-            comment: The website name as it should appear on the front-end
-            default: Another amazing OctoberCMS Theme!
-
-        primary_color:
-            label: Primary color
-            type: colorpicker
-            assetVar: 'primary-color'
-            default: '#ffb3b3'
-
-        ancent_color:
-            label: Ancent color
-            type: colorpicker
-            assetVar: 'ancent-color'
-            default: '#72d0eb'
-
-        link_color:
-            label: Link color
-            type: colorpicker
-            assetVar: 'link-color'
-            default: '#ffb3b3'
-
-        footer_color:
-            label: Footer background color
-            type: colorpicker
-            assetVar: 'footer-color'
-            default: '#1F3F50'
+form: theme_fields.yaml
