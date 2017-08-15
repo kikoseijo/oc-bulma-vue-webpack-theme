@@ -97,10 +97,6 @@ $(document).ready(function(){
     $('#ct-btn-scroll>.icon').toggleClass("bounce");
   }, 3000);
 
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-
   // Dropdowns
   var $metalinks = getAll('#meta a');
 
@@ -143,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Toggles
 
   var $burgers = getAll('.burger');
-
   if ($burgers.length > 0) {
     $burgers.forEach(function ($el) {
       $el.addEventListener('click', function () {

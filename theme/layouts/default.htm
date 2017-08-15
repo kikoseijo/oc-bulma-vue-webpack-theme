@@ -1,6 +1,4 @@
 description = "Default layout"
-
-
 ==
 use System\Classes\CombineAssets;
 use CMS\Models\ThemeData;
@@ -44,8 +42,14 @@ function onStart()
         <link rel="icon" type="image/png" href="{{ 'assets/images/icon.png'|theme }}">
         <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
 
-        {% set curCssFile = 'assets/css/colors/' ~ css_file_values ~ '.css' %}
-        <link href="{{ curCssFile|theme }}" rel="stylesheet">
+        {% if this.theme.use_minified %}
+          {% set colorCss = 'assets/css/colors/' ~ css_file_values ~ '.min.css' %}
+          {% set appCss = 'assets/css/app.min.css' %}
+        {% else %}
+          {% set colorCss = 'assets/css/colors/' ~ css_file_values ~ '.css' %}
+          {% set appCss = 'assets/css/app.css' %}
+        {% endif %}
+        <link href="{{ [colorCss,appCss]|theme }}" rel="stylesheet">
 
         <link href="{{ [
             'assets/less/app.less',
@@ -80,7 +84,12 @@ function onStart()
 
 
         <!-- Scripts -->
-        <script src="{{ 'assets/scripts/main.js'|theme }}"></script>
+        {% if this.theme.use_minified %}
+          <script src="{{ 'assets/scripts/main.min.js'|theme }}"></script>
+        {% else %}
+          <script src="{{ 'assets/scripts/main.js'|theme }}"></script>
+        {% endif %}
+
 
         {% if this.theme.load_wow_js %}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/graingert-wow/1.2.0/wow.min.js"></script>

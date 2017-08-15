@@ -11,6 +11,7 @@ module.exports = {
     main: [
       './src/scripts/main.js',
     ],
+    app: './src/styles/app.sass',
     brown: './src/styles/colors/brown.sass',
     cream: './src/styles/colors/cream.sass',
     grey: './src/styles/colors/grey.sass',
@@ -23,8 +24,8 @@ module.exports = {
     yellow: './src/styles/colors/yellow.sass',
   },
   output: {
-    path: path.resolve(__dirname, './theme/assets/scripts'),
-    filename: '[name].js',
+    path: path.resolve(__dirname, './dist'),
+    filename: inProduction ? 'scripts/[name].min.js' : 'scripts/[name].js',
   },
   module: {
     rules: [
@@ -65,6 +66,7 @@ module.exports = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
+          publicPath: './.',
           use: ['css-loader']
         })
       },
@@ -74,7 +76,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: './../images/[name].[ext]'
+              name: './images/[name].[ext]'
             }
           },
           'img-loader'
@@ -84,7 +86,7 @@ module.exports = {
         test: /\.(svg|woff|woff2|eot|ttf)(\?.*$|$)/,
         loader: 'file-loader',
         options: {
-          name: './../fonts/[name].[ext]'
+          name: './fonts/[name].[ext]'
         }
       }
     ]
@@ -107,24 +109,22 @@ module.exports = {
     }),
     new WebpackNotifierPlugin({contentImage: path.join(__dirname, 'src/images/icon.png')}),
     new WebpackNotifierPlugin({title: 'Webpack'}),
-    function () {
-      this.plugin('done', stats => {
-        require('fs').writeFileSync(
-          path.join(__dirname, 'theme/manifest.json'),
-          JSON.stringify(stats.toJson())
-        );
-      })
-    }
   ]
 };
 
 if (inProduction) {
   module.exports.plugins.push(
-    new ExtractTextPlugin('./../css/colors/[name].min.css'),
-    new webpack.optimize.UglifyJsPlugin()
+    new ExtractTextPlugin('./css/[name].min.css'),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      parallel: {
+        cache: true,
+        workers: 4
+      }
+    })
   );
 } else {
   module.exports.plugins.push(
-    new ExtractTextPlugin('./../css/colors/[name].css')
+    new ExtractTextPlugin('./css/[name].css')
   );
 }
