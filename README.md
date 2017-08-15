@@ -1,12 +1,13 @@
 Bulma.io + VueJs + Webpack | Developper Theme
 ==========
 
-OctoberCMS free theme
-> Under development !!!! NOT READY FOR PRODUCTION, Just yet.
+This is the parent project of a free theme built for [OctoberCMS](http://octobercms.com) free theme you can find [here](https://github.com/kikoseijo/oc-bulma-theme).
+Uses Webpack to process bulma.io SCSS and Injects jQuery + VueJS + Buefy.
+Because its a package to build themes has several input files to extract diferent color versions on [color].named files.
 
-## Combining CSS and JavaScript
+## Requirements
 
-This theme uses node to build css and js files, does image optimization and minifiaction.
+[NodeJs](https://nodejs.org/)
 
 ### Install
 
@@ -14,11 +15,11 @@ Clone repo and `cd` to the directory where you downloaded the full package. Use 
 
     npm install
 
-You can `npm run dev` for building css and js from the `/src/` directory to the `theme` directory.
+You can `npm run dev` for building css and js from the `/src/` directory to the `dist` directory.
 Run `npm run watch` to watch for changes during development.
 Run `npm run build` to minify CSS and JS files.
 
-> ⚠️ The build process will delete content form the `theme/assets` folder, please be carefull
+
 
 ## Credits
 * [Development Team](http://sunnyface.com)
@@ -31,4 +32,4 @@ Run `npm run build` to minify CSS and JS files.
 
 
 
-> **Important**: Make sure you keep the `{% styles %}` and `{% scripts %}` placeholder tags as these are used by plugins for injecting assets.
+> **Important**: enjoy it!
