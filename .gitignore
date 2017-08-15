@@ -1,5 +1,8 @@
 .grunt
 bower_components
+promo/*.psd
+promo/*.png
+dist
 build/Release
 node_modules/
 typings/

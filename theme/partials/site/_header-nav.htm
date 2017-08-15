@@ -7,12 +7,12 @@ description = "Header Navigation partial"
       <img src="{{ 'assets/images/bulma-white.png'|theme }}" alt="{{ this.theme.site_name }}">
     </a>
     <a class="navbar-item is-hidden-desktop" href="https://github.com/" target="_blank">
-      <span class="icon" style="color: #333;">
+      <span class="icon">
         <i class="fa fa-github"></i>
       </span>
     </a>
     <a class="navbar-item is-hidden-desktop" href="https://twitter.com/" target="_blank">
-      <span class="icon" style="color: #55acee;">
+      <span class="icon">
         <i class="fa fa-twitter"></i>
       </span>
     </a>
@@ -27,39 +27,37 @@ description = "Header Navigation partial"
     <div class="navbar-end">
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Elements
-        </a>
+        <div class="navbar-link is-title">Elements</div>
         <div class="navbar-dropdown is-boxed">
-          {% for element in this.theme.config.elements %}
-          <a href="/elements/{{element}}" class="navbar-item{% if show_element == element %} is-active{% endif %}">{{str_studly(element)}}</a>
-          {% endfor %}
-          <hr class="navbar-divider">
-          <div class="navbar-item">
-            More elements in &nbsp;<span class="tag is-primary"><a href="http://bulma.io" class="is-bold" target="_blank">Bulma.io</a></span>
+          <div class="columns is-gapless is-multiline is-mobile">
+            {% for element in this.theme.config.elements %}
+            <div class="column is-half">
+              <a href="/elements/{{element}}" class="navbar-item{% if show_element == element %} is-active{% endif %}">{{str_studly(element)}}</a>
+            </div>
+            {% endfor %}
+          </div>
+          <hr class="navbar-divider is-hidden-touch">
+          <div class="navbar-item is-hidden-touch">
+            More elements in &nbsp;<span class="tag is-primary"><a href="http://bulma.io" class="is-bold is-primary" target="_blank">Bulma.io</a></span>
           </div>
         </div>
       </div>
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Vue Components
-        </a>
+        <div class="navbar-link is-title">Vue Components</div>
         <div class="navbar-dropdown is-boxed">
           {% for component in this.theme.config.buefyEl %}
             <a href="/components/{{component}}" class="navbar-item{% if show_element == component %} is-active{% endif %}">{{str_studly(component)}}</a>
           {% endfor %}
-          <hr class="navbar-divider">
-          <div class="navbar-item">
-            More components in &nbsp;<span class="tag is-primary"><a href="https://buefy.github.io" class="is-bold" target="_blank">Buefy</a></span>
+          <hr class="navbar-divider is-hidden-touch">
+          <div class="navbar-item is-hidden-touch">
+            More components in &nbsp;<span class="tag is-primary"><a href="https://buefy.github.io" class="is-boldn is-info" target="_blank">Buefy</a></span>
           </div>
         </div>
       </div>
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <div class="navbar-link">
-          Examples
-        </div>
+        <div class="navbar-link is-title">Examples</div>
         <div class="navbar-dropdown is-boxed">
           {% for component in this.theme.config.pagesExamples %}
             <a href="/page-examples/{{component}}" class="navbar-item{% if show_element == component %} is-active{% endif %}">{{str_studly(component)}}</a>
@@ -67,17 +65,23 @@ description = "Header Navigation partial"
         </div>
      </div>
      <div class="navbar-item has-dropdown is-hoverable">
-       <div class="navbar-link">
-         Colors
-       </div>
+       <div class="navbar-link is-title">Colors</div>
        <div class="navbar-dropdown is-boxed">
-         {% for component in color_values %}
-           <a href="?color={{component}}" class="navbar-item{% if css_file_values == component %} is-active{% endif %}">{{str_studly(component)}}</a>
-         {% endfor %}
+         <div class="columns is-gapless is-multiline is-mobile">
+           {% for component in color_values %}
+           <div class="column is-half">
+             <a href="?color={{component}}" class="navbar-item{% if css_file_values == component %} is-active{% endif %}">{{str_studly(component)}}</a>
+           </div>
+           {% endfor %}
+           <hr class="navbar-divider is-hidden-touch">
+           <div class="navbar-item is-hidden-touch">
+             Customize your color using SASS
+           </div>
+         </div>
        </div>
      </div>
 
-        <span class="navbar-item">
+        <span class="navbar-item has-text-centered">
           <a class="button is-default">
             <span class="icon">
                   <i class="fa fa-download"></i>

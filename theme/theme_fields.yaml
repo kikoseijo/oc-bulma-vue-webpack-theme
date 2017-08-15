@@ -12,6 +12,13 @@ tabs:
       default: Bulma theme for OctoberCMS
       span: auto
 
+    use_minified:
+      tab: Info
+      label: Will load js and css using the .min. prefix on layout.
+      type: switch
+      span: auto
+      default: true
+
     site_slogan:
       tab: Info
       label: Site slogan

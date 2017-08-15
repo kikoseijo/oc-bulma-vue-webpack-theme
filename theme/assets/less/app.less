@@ -18,7 +18,10 @@ box-shadow: 0 1px 5px rgba(0, 0, 0, .15); border-radius: 3px; position: relative
 .page-home .navbar { padding: 20px 0; min-height:(3.25rem + 1.6);  }
 nav.navbar.is-transparent { background-color:transparent; box-shadow: 0 1px 0 rgba(245, 247, 250, 0.2); }
 nav.navbar.is-transparent .navbar-link::after {  border-color: #fff - @primary-color; }
-
+.navbar-burger.is-active span { background-color: @primary-color-invert}
+div#topMenu.navbar-menu.is-active { background-color:@primary-color; color: @primary-color-invert;}
+div#topMenu.navbar-menu.is-active a { color: @primary-color-invert; background-color:@primary-color;}
+div#topMenu.navbar-menu.is-active a.navbar-item.is-active { color:lighten(@primary-color-invert,5%); background-color:darken(@primary-color,2%);}
 .page-home .hero.is-fullheight.is-primary.is-bold {
   background-color: @primary-color;
   background:
@@ -26,13 +29,10 @@ nav.navbar.is-transparent .navbar-link::after {  border-color: #fff - @primary-c
   linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),
   url('../images/photo-intro.jpg');
 }
-.hero.is-primary .navbar-menu,
-.hero.is-dark .navbar-menu {
-  >div:not(.navbar-dropdown) >a.navbar-item,
-  .navbar-link,
-  .navbar-item >:not(.navbar-dropdown) >a:not(.button) {
+
+  .navbar-link.is-title {
     color: #fff;
-    padding: 0 30px;
+    padding: 0 35px;
     font-weight: bold;
     text-transform: uppercase;
     color: #fff;
@@ -47,7 +47,7 @@ nav.navbar.is-transparent .navbar-link::after {  border-color: #fff - @primary-c
     height: 45px;
     border-radius:0;
   }
-}
+
 .m-t-0 {  margin-top: 0 !important;}
 .m-t-sm {  margin-top: 1rem !important;}
 .m-b-0 {  margin-bottom: 0 !important;}
