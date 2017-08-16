@@ -23,7 +23,7 @@ function onStart()
         ThemeData::where('theme',$dirName)->update(['data' => json_encode($newSettings)]);
 
     } else {
-        $this['css_file_values'] =  $colors[$this->theme->primary_color];
+        $this['css_file_values'] =  array_key_exists($this->theme->primary_color, $colors) ? $colors[$this->theme->primary_color] : '#300032';
     }
 }
 ==

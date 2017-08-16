@@ -1,7 +1,7 @@
 Bulma.io + VueJs + Webpack | Developper Theme
 ==========
 
-This is the parent project of a free theme built for [OctoberCMS](http://octobercms.com) free theme you can find [here](https://github.com/kikoseijo/oc-bulma-theme).
+This is the parent project of a free theme built for [OctoberCMS](http://octobercms.com) and it contains a [free OctoberCMS theme](https://github.com/kikoseijo/oc-bulma-theme).
 Uses Webpack to process bulma.io SCSS and Injects jQuery + VueJS + Buefy.
 Because its a package to build themes has several input files to extract diferent color versions on [color].named files.
 
