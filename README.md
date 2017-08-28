@@ -7,7 +7,7 @@ Because its a package to build themes has several input files to extract diferen
 
 ## Requirements
 
-[NodeJs](https://nodejs.org/)
+[NodeJs.org](https://nodejs.org/)
 
 ### Install
 
