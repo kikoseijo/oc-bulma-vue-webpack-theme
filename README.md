@@ -20,7 +20,6 @@ Run `npm run watch` to watch for changes during development.
 Run `npm run build` to minify CSS and JS files.
 
 
-
 ## Credits
 * [Development Team](http://sunnyface.com)
 * [Font-Awesome](http://fontawesome.io)
