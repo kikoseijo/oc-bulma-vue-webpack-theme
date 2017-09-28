@@ -22,12 +22,13 @@ Run `npm run build` to minify CSS and JS files.
 
 ## Credits
 * [Development Team](http://sunnyface.com)
-* [Font-Awesome](http://fontawesome.io)
-* [OctoberCMS](http://octobercms.com)
-* [Bulma.io](http://bulma.io)
-* [VueJs](https://vuejs.org)
-* [Laravel](https://laravel.com)
-* [Webpack](https://webpack.js.org)
+* [Partners](http://sosvecinos.com "Herramientas para comunidades de propietarios y vecinos")
+* [Font-Awesome](http://fontawesome.io "Font icons pro")
+* [OctoberCMS](http://octobercms.com "Laravel CMS")
+* [Bulma.io](http://bulma.io "Flexbox based CSS framework")
+* [VueJs](https://vuejs.org "VueJS for dynamic javascript")
+* [Laravel](https://laravel.com "For Web Artisans")
+* [Webpack](https://webpack.js.org "javascripts + assets manager")
 
 
 
