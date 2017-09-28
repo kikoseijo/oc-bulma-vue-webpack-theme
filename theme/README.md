@@ -21,14 +21,14 @@ with `Webpack` `ES6` and `SASS` you can checkout its parent
 project on [Github](https://github.com/kikoseijo/oc-bulma-vue-webpack-theme)
 
 ## Credits
-* [Development Team](http://sunnyface.com)
-* [Font-Awesome](http://fontawesome.io)
-* [OctoberCMS](http://octobercms.com)
-* [Bulma.io](http://bulma.io)
-* [Buefy](https://buefy.github.io)
-* [VueJs](https://vuejs.org)
-* [Laravel](https://laravel.com)
-* [Webpack](https://webpack.js.org)
+* [Development Team](http://sunnyface.com "Empresa programadores en Málaga")
+* [Partners](http://sosvecinos.com "Herramientas para comunidades de propietarios y vecinos")
+* [Font-Awesome](http://fontawesome.io "Font icons pro")
+* [OctoberCMS](http://octobercms.com "Laravel CMS")
+* [Bulma.io](http://bulma.io "Flexbox based CSS framework")
+* [VueJs](https://vuejs.org "VueJS for dynamic javascript")
+* [Laravel](https://laravel.com "For Web Artisans")
+* [Webpack](https://webpack.js.org "javascripts + assets manager")
 * [Photos by Unsplash](https://unsplash.com/)
 
 > **Important**: Enjoy it! Feedbacks welcome.
