@@ -32,3 +32,7 @@ project on [Github](https://github.com/kikoseijo/oc-bulma-vue-webpack-theme)
 * [Photos by Unsplash](https://unsplash.com/)
 
 > **Important**: Enjoy it! Feedbacks welcome.
+
+### Credits:
+
+* [GestorApp.com](https//gestorapp.com "Gestor de aplicaciones móviles en Málaga")
