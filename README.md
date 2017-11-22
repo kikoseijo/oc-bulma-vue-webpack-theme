@@ -21,6 +21,7 @@ Run `npm run build` to minify CSS and JS files.
 
 
 ## Credits
+
 * [Development Team](http://sunnyface.com)
 * [Partners](http://sosvecinos.com "Herramientas para comunidades de propietarios y vecinos")
 * [Font-Awesome](http://fontawesome.io "Font icons pro")
@@ -34,3 +35,5 @@ Run `npm run build` to minify CSS and JS files.
 
 
 > **Important**: enjoy it!
+
+---
