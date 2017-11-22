@@ -29,6 +29,7 @@ Run `npm run build` to minify CSS and JS files.
 * [VueJs](https://vuejs.org "VueJS for dynamic javascript")
 * [Laravel](https://laravel.com "For Web Artisans")
 * [Webpack](https://webpack.js.org "javascripts + assets manager")
+* [AppDev](http://gestorapp.com "Gestor de aplicaciones móviles")
 
 
 
